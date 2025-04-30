@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d89aa994c607d6246290cdb55a7d831d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+     bottom: 40px; left: 40px; width: 230px; height: 90px; 
+     background-color: white; border:2px solid grey; z-index:9999;
+     font-size:14px; padding: 10px;">
+<b>Public Schools in Stockton, CA</b><br>
+<span style="display:inline-block;width:12px;height:12px;
+background:black;border-radius:50%;margin-right:5px;"></span> Charter School<br>
+<span style="display:inline-block;width:12px;height:12px;
+background:black;transform: rotate(45deg);margin-right:5px;"></span> District School
+</div>
+    
+            <div class="folium-map" id="map_d89aa994c607d6246290cdb55a7d831d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d89aa994c607d6246290cdb55a7d831d = L.map(
+                "map_d89aa994c607d6246290cdb55a7d831d",
+                {
+                    center: [37.958, -121.2908],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c61aacc94013f583e473065d71b58e98 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d89aa994c607d6246290cdb55a7d831d);
+        
+    
+            var feature_group_21402902530835f78cb9190072e8f5cf = L.featureGroup(
+                {}
+            ).addTo(map_d89aa994c607d6246290cdb55a7d831d);
+        
+    
+            var marker_f5a4fcc8a15f92862025a02d0255af86 = L.marker(
+                [37.908382, -121.2326],
+                {}
+            ).addTo(feature_group_21402902530835f78cb9190072e8f5cf);
+        
+    
+            var beautify_icon_ee9bd68b80b0cd6ec2c60f68007977f8 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff0000ff", "borderColor": "#ff0000ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_f5a4fcc8a15f92862025a02d0255af86.setIcon(beautify_icon_ee9bd68b80b0cd6ec2c60f68007977f8);
+        
+    
+        var popup_80adaeef14231f9bc56cca218e3d1b43 = L.popup({"maxWidth": 300});
+
+        
+            var html_b4d979115c04e6b9d815cf5c0a511fe6 = $(`<div id="html_b4d979115c04e6b9d815cf5c0a511fe6" style="width: 100.0%; height: 100.0%;"><b>one.Charter</b><br>2707 Transworld Drive, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>College Matriculation Rate:</b> 14.8%</div>`)[0];
+            popup_80adaeef14231f9bc56cca218e3d1b43.setContent(html_b4d979115c04e6b9d815cf5c0a511fe6);
+        
+
+        marker_f5a4fcc8a15f92862025a02d0255af86.bindPopup(popup_80adaeef14231f9bc56cca218e3d1b43)
+        ;
+
+        
+    
+    
+            var marker_68007d35266ce021b2cb57484a0d5593 = L.marker(
+                [37.907677, -121.23095],
+                {}
+            ).addTo(feature_group_21402902530835f78cb9190072e8f5cf);
+        
+    
+            var beautify_icon_a84c91d8411baff00307acb0264506f7 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ffc600ff", "borderColor": "#ffc600ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_68007d35266ce021b2cb57484a0d5593.setIcon(beautify_icon_a84c91d8411baff00307acb0264506f7);
+        
+    
+        var popup_4f5fcea33a455e806d50a55948604744 = L.popup({"maxWidth": 300});
+
+        
+            var html_3964b4ac9c97aa25a61b1254f51a076f = $(`<div id="html_3964b4ac9c97aa25a61b1254f51a076f" style="width: 100.0%; height: 100.0%;"><b>Venture Academy</b><br>2829 Transworld Drive, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>College Matriculation Rate:</b> 50.6%</div>`)[0];
+            popup_4f5fcea33a455e806d50a55948604744.setContent(html_3964b4ac9c97aa25a61b1254f51a076f);
+        
+
+        marker_68007d35266ce021b2cb57484a0d5593.bindPopup(popup_4f5fcea33a455e806d50a55948604744)
+        ;
+
+        
+    
+    
+            var marker_f449db9f76076ced9eb87fcc961acbc3 = L.marker(
+                [38.037047, -121.27444],
+                {}
+            ).addTo(feature_group_21402902530835f78cb9190072e8f5cf);
+        
+    
+            var beautify_icon_fce030ab348a9c8f05393013d8b43880 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#3d9f00ff", "borderColor": "#3d9f00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_f449db9f76076ced9eb87fcc961acbc3.setIcon(beautify_icon_fce030ab348a9c8f05393013d8b43880);
+        
+    
+        var popup_022eac965da4fa97149a0de83d18cc95 = L.popup({"maxWidth": 300});
+
+        
+            var html_7c23b37b9c8f865e8cf84d3e5da07794 = $(`<div id="html_7c23b37b9c8f865e8cf84d3e5da07794" style="width: 100.0%; height: 100.0%;"><b>Aspire Benjamin Holt College Preparatory Academy</b><br>3201 East Morada Lane, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> Directly funded<br><b>College Matriculation Rate:</b> 87.5%</div>`)[0];
+            popup_022eac965da4fa97149a0de83d18cc95.setContent(html_7c23b37b9c8f865e8cf84d3e5da07794);
+        
+
+        marker_f449db9f76076ced9eb87fcc961acbc3.bindPopup(popup_022eac965da4fa97149a0de83d18cc95)
+        ;
+
+        
+    
+    
+            var marker_6c7241a7e35410fb39d3074109898c7a = L.marker(
+                [38.010512, -121.31675],
+                {}
+            ).addTo(feature_group_21402902530835f78cb9190072e8f5cf);
+        
+    
+            var beautify_icon_f2c62914af7efcd94aaf090eaf3ee963 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#fff900ff", "borderColor": "#fff900ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_6c7241a7e35410fb39d3074109898c7a.setIcon(beautify_icon_f2c62914af7efcd94aaf090eaf3ee963);
+        
+    
+        var popup_73f7a5a23b754eebfc6f5bf888e4460f = L.popup({"maxWidth": 300});
+
+        
+            var html_3d8485065a041200e22e49fa7bbebd73 = $(`<div id="html_3d8485065a041200e22e49fa7bbebd73" style="width: 100.0%; height: 100.0%;"><b>ABLE Charter</b><br>6515 Inglewood Avenue, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> Directly funded<br><b>College Matriculation Rate:</b> 65.7%</div>`)[0];
+            popup_73f7a5a23b754eebfc6f5bf888e4460f.setContent(html_3d8485065a041200e22e49fa7bbebd73);
+        
+
+        marker_6c7241a7e35410fb39d3074109898c7a.bindPopup(popup_73f7a5a23b754eebfc6f5bf888e4460f)
+        ;
+
+        
+    
+    
+            var marker_8d1758f753f4931c42d1ccff5851d843 = L.marker(
+                [37.975822, -121.28033],
+                {}
+            ).addTo(feature_group_21402902530835f78cb9190072e8f5cf);
+        
+    
+            var beautify_icon_7dac2dcedf4b35bf304846e03a9e9f04 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#deef00ff", "borderColor": "#deef00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_8d1758f753f4931c42d1ccff5851d843.setIcon(beautify_icon_7dac2dcedf4b35bf304846e03a9e9f04);
+        
+    
+        var popup_4863873c51a0900b3862765da88fb1ca = L.popup({"maxWidth": 300});
+
+        
+            var html_cb882644f40c871e147ceda50a355ef6 = $(`<div id="html_cb882644f40c871e147ceda50a355ef6" style="width: 100.0%; height: 100.0%;"><b>Aspire Langston Hughes Academy</b><br>2050 West Lane, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>College Matriculation Rate:</b> 70.9%</div>`)[0];
+            popup_4863873c51a0900b3862765da88fb1ca.setContent(html_cb882644f40c871e147ceda50a355ef6);
+        
+
+        marker_8d1758f753f4931c42d1ccff5851d843.bindPopup(popup_4863873c51a0900b3862765da88fb1ca)
+        ;
+
+        
+    
+    
+            var marker_8d7045b5adbaeaaf04af325bbd1e4570 = L.marker(
+                [37.967174, -121.28962],
+                {}
+            ).addTo(feature_group_21402902530835f78cb9190072e8f5cf);
+        
+    
+            var beautify_icon_70ed45e6bd745cf562a953a4ba6bfde0 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#2e9700ff", "borderColor": "#2e9700ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_8d7045b5adbaeaaf04af325bbd1e4570.setIcon(beautify_icon_70ed45e6bd745cf562a953a4ba6bfde0);
+        
+    
+        var popup_11aed678e54de762838ad65fd7b50af6 = L.popup({"maxWidth": 300});
+
+        
+            var html_8420ff01ab8f77b6b3061d23a5f7d302 = $(`<div id="html_8420ff01ab8f77b6b3061d23a5f7d302" style="width: 100.0%; height: 100.0%;"><b>Stockton Early College Academy</b><br>349 East Vine Street, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Locally funded<br><b>College Matriculation Rate:</b> 89.0%</div>`)[0];
+            popup_11aed678e54de762838ad65fd7b50af6.setContent(html_8420ff01ab8f77b6b3061d23a5f7d302);
+        
+
+        marker_8d7045b5adbaeaaf04af325bbd1e4570.bindPopup(popup_11aed678e54de762838ad65fd7b50af6)
+        ;
+
+        
+    
+    
+            var marker_55039c94f5371b9ab54962c790cf5f72 = L.marker(
+                [37.952846, -121.28498],
+                {}
+            ).addTo(feature_group_21402902530835f78cb9190072e8f5cf);
+        
+    
+            var beautify_icon_231966a4cd871ad580215ed9d863c3bd = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#91c900ff", "borderColor": "#91c900ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_55039c94f5371b9ab54962c790cf5f72.setIcon(beautify_icon_231966a4cd871ad580215ed9d863c3bd);
+        
+    
+        var popup_a1937a7c8e48c837a7c779ccfd4fcf59 = L.popup({"maxWidth": 300});
+
+        
+            var html_e3d6c7b5e361953fe572d056d695a036 = $(`<div id="html_e3d6c7b5e361953fe572d056d695a036" style="width: 100.0%; height: 100.0%;"><b>Stockton Collegiate International Secondary</b><br>400 E. Main Street Suite 131, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>College Matriculation Rate:</b> 78.8%</div>`)[0];
+            popup_a1937a7c8e48c837a7c779ccfd4fcf59.setContent(html_e3d6c7b5e361953fe572d056d695a036);
+        
+
+        marker_55039c94f5371b9ab54962c790cf5f72.bindPopup(popup_a1937a7c8e48c837a7c779ccfd4fcf59)
+        ;
+
+        
+    
+    
+            var marker_babbc871eac0af1174579f2a21c21886 = L.marker(
+                [37.96527, -121.28436],
+                {}
+            ).addTo(feature_group_21402902530835f78cb9190072e8f5cf);
+        
+    
+            var beautify_icon_0f7ba5cdf20d4ca6b98f81e8fe4c58ec = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#4fa800ff", "borderColor": "#4fa800ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_babbc871eac0af1174579f2a21c21886.setIcon(beautify_icon_0f7ba5cdf20d4ca6b98f81e8fe4c58ec);
+        
+    
+        var popup_333e5fffba7fa6678794f242d638b661 = L.popup({"maxWidth": 300});
+
+        
+            var html_845009429343c289def7d4a0a9b1f967 = $(`<div id="html_845009429343c289def7d4a0a9b1f967" style="width: 100.0%; height: 100.0%;"><b>Health Careers Academy</b><br>931 East Magnolia Street, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Locally funded<br><b>College Matriculation Rate:</b> 85.6%</div>`)[0];
+            popup_333e5fffba7fa6678794f242d638b661.setContent(html_845009429343c289def7d4a0a9b1f967);
+        
+
+        marker_babbc871eac0af1174579f2a21c21886.bindPopup(popup_333e5fffba7fa6678794f242d638b661)
+        ;
+
+        
+    
+    
+            var marker_799f78613e9bb0abf39017fd1b56892a = L.marker(
+                [37.984705, -121.32296],
+                {}
+            ).addTo(feature_group_21402902530835f78cb9190072e8f5cf);
+        
+    
+            var beautify_icon_082485557017aca9f0b519635c75d730 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#7dbe00ff", "borderColor": "#7dbe00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_799f78613e9bb0abf39017fd1b56892a.setIcon(beautify_icon_082485557017aca9f0b519635c75d730);
+        
+    
+        var popup_95ea77aee352e3b4a624fac706306351 = L.popup({"maxWidth": 300});
+
+        
+            var html_686b71e6f090d812d83cfd64f1f55011 = $(`<div id="html_686b71e6f090d812d83cfd64f1f55011" style="width: 100.0%; height: 100.0%;"><b>Pacific Law Academy</b><br>1621 Brookside Road, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Locally funded<br><b>College Matriculation Rate:</b> 80.9%</div>`)[0];
+            popup_95ea77aee352e3b4a624fac706306351.setContent(html_686b71e6f090d812d83cfd64f1f55011);
+        
+
+        marker_799f78613e9bb0abf39017fd1b56892a.bindPopup(popup_95ea77aee352e3b4a624fac706306351)
+        ;
+
+        
+    
+    
+            var feature_group_a56731ded1ddac993af57f4677d4090a = L.featureGroup(
+                {}
+            ).addTo(map_d89aa994c607d6246290cdb55a7d831d);
+        
+    
+            var marker_7d1972f92b9a1a3c5ca7de28513cc0a0 = L.marker(
+                [37.906523, -121.22915],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_6165e07672fac1910a0de9cd4808259d = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff4c00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_7d1972f92b9a1a3c5ca7de28513cc0a0.setIcon(div_icon_6165e07672fac1910a0de9cd4808259d);
+        
+    
+        var popup_8d8bbd2daf6c4544ce2acca3c1344ffa = L.popup({"maxWidth": 300});
+
+        
+            var html_29f1aab9f6f518c78e0b85d9d1e5689c = $(`<div id="html_29f1aab9f6f518c78e0b85d9d1e5689c" style="width: 100.0%; height: 100.0%;"><b>No Data</b><br>2922 Transworld Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> nan<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 26.9%</div>`)[0];
+            popup_8d8bbd2daf6c4544ce2acca3c1344ffa.setContent(html_29f1aab9f6f518c78e0b85d9d1e5689c);
+        
+
+        marker_7d1972f92b9a1a3c5ca7de28513cc0a0.bindPopup(popup_8d8bbd2daf6c4544ce2acca3c1344ffa)
+        ;
+
+        
+    
+    
+            var marker_6026bfeafcb9fe7d24ece7079db755ba = L.marker(
+                [37.908333, -121.23275],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_c361e94cda821df907b5f5ec01813cd5 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff0b00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_6026bfeafcb9fe7d24ece7079db755ba.setIcon(div_icon_c361e94cda821df907b5f5ec01813cd5);
+        
+    
+        var popup_dd7c47c6341d1ccfad33d13cd41f1b9f = L.popup({"maxWidth": 300});
+
+        
+            var html_cb4a00a7bea6102baa2ac7b3a6516fad = $(`<div id="html_cb4a00a7bea6102baa2ac7b3a6516fad" style="width: 100.0%; height: 100.0%;"><b>John F. Cruikshank, Jr.</b><br>2707 Transworld Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 16.7%</div>`)[0];
+            popup_dd7c47c6341d1ccfad33d13cd41f1b9f.setContent(html_cb4a00a7bea6102baa2ac7b3a6516fad);
+        
+
+        marker_6026bfeafcb9fe7d24ece7079db755ba.bindPopup(popup_dd7c47c6341d1ccfad33d13cd41f1b9f)
+        ;
+
+        
+    
+    
+            var marker_f6654c2bc1caef7ac9b401272d58f9db = L.marker(
+                [37.90829739990552, -121.23276272466687],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_b80d632ca91d8bd0ed4d4aa3109ed800 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff1700ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_f6654c2bc1caef7ac9b401272d58f9db.setIcon(div_icon_b80d632ca91d8bd0ed4d4aa3109ed800);
+        
+    
+        var popup_0f6f9500d241178640c40918ee0b2748 = L.popup({"maxWidth": 300});
+
+        
+            var html_200707f5edcbe5722ae94671201fc3d6 = $(`<div id="html_200707f5edcbe5722ae94671201fc3d6" style="width: 100.0%; height: 100.0%;"><b>San Joaquin County Community</b><br>2707 Transworld Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 18.6%</div>`)[0];
+            popup_0f6f9500d241178640c40918ee0b2748.setContent(html_200707f5edcbe5722ae94671201fc3d6);
+        
+
+        marker_f6654c2bc1caef7ac9b401272d58f9db.bindPopup(popup_0f6f9500d241178640c40918ee0b2748)
+        ;
+
+        
+    
+    
+            var marker_d7316265d9e952fc7e5f34e8c614cfc5 = L.marker(
+                [38.000321, -121.33516],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_2b70154fec84df2f49ab9b925b82f087 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #fffe00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_d7316265d9e952fc7e5f34e8c614cfc5.setIcon(div_icon_2b70154fec84df2f49ab9b925b82f087);
+        
+    
+        var popup_7da8d8a3b9d5f5c6bceb2eded8bd9a2c = L.popup({"maxWidth": 300});
+
+        
+            var html_19b8072186af5011df49de3f5fe53e87 = $(`<div id="html_19b8072186af5011df49de3f5fe53e87" style="width: 100.0%; height: 100.0%;"><b>No Data</b><br>2010 West Swain Road, Stockton<br><b>Charter:</b> No Data<br><b>Geographic/Host District:</b> nan<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 66.9%</div>`)[0];
+            popup_7da8d8a3b9d5f5c6bceb2eded8bd9a2c.setContent(html_19b8072186af5011df49de3f5fe53e87);
+        
+
+        marker_d7316265d9e952fc7e5f34e8c614cfc5.bindPopup(popup_7da8d8a3b9d5f5c6bceb2eded8bd9a2c)
+        ;
+
+        
+    
+    
+            var marker_eda46b9a8f2cf35615d6ac5878968032 = L.marker(
+                [38.000094, -121.33286],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_bde3940b107dd5482e2c01dabea48723 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff8200ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_eda46b9a8f2cf35615d6ac5878968032.setIcon(div_icon_bde3940b107dd5482e2c01dabea48723);
+        
+    
+        var popup_d2a155178db716dde646d131f3cc28c5 = L.popup({"maxWidth": 300});
+
+        
+            var html_e8413b06d9e8fad94d826cd33ea21c8a = $(`<div id="html_e8413b06d9e8fad94d826cd33ea21c8a" style="width: 100.0%; height: 100.0%;"><b>Village Oaks High</b><br>1900 West Swain, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 35.6%</div>`)[0];
+            popup_d2a155178db716dde646d131f3cc28c5.setContent(html_e8413b06d9e8fad94d826cd33ea21c8a);
+        
+
+        marker_eda46b9a8f2cf35615d6ac5878968032.bindPopup(popup_d2a155178db716dde646d131f3cc28c5)
+        ;
+
+        
+    
+    
+            var marker_4c508c84ca87681a9a397ef90b93fa8f = L.marker(
+                [38.010567, -121.33939],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_6498acb77ae5c0fed608bbaa272ebb22 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #f1f800ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_4c508c84ca87681a9a397ef90b93fa8f.setIcon(div_icon_6498acb77ae5c0fed608bbaa272ebb22);
+        
+    
+        var popup_395d96f2ad608e61347d2a1cda7f42a9 = L.popup({"maxWidth": 300});
+
+        
+            var html_6e602c2d5f1d4252ac53bd1dc2853a63 = $(`<div id="html_6e602c2d5f1d4252ac53bd1dc2853a63" style="width: 100.0%; height: 100.0%;"><b>Lincoln High</b><br>6844 Alexandria Place, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 69.0%</div>`)[0];
+            popup_395d96f2ad608e61347d2a1cda7f42a9.setContent(html_6e602c2d5f1d4252ac53bd1dc2853a63);
+        
+
+        marker_4c508c84ca87681a9a397ef90b93fa8f.bindPopup(popup_395d96f2ad608e61347d2a1cda7f42a9)
+        ;
+
+        
+    
+    
+            var marker_7c6f9f640a68fe30f128bb84c016b7b8 = L.marker(
+                [38.040375, -121.2984],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_369e2d5dab26fe6de1478b32a04153c9 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffea00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_7c6f9f640a68fe30f128bb84c016b7b8.setIcon(div_icon_369e2d5dab26fe6de1478b32a04153c9);
+        
+    
+        var popup_fbe940f6f0b0fe920210cdf4b213ff5b = L.popup({"maxWidth": 300});
+
+        
+            var html_57c30d66804811ae9c769c99efb5538b = $(`<div id="html_57c30d66804811ae9c769c99efb5538b" style="width: 100.0%; height: 100.0%;"><b>Ronald E. McNair High</b><br>9550 Ronald E. McNair Way, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 61.1%</div>`)[0];
+            popup_fbe940f6f0b0fe920210cdf4b213ff5b.setContent(html_57c30d66804811ae9c769c99efb5538b);
+        
+
+        marker_7c6f9f640a68fe30f128bb84c016b7b8.bindPopup(popup_fbe940f6f0b0fe920210cdf4b213ff5b)
+        ;
+
+        
+    
+    
+            var marker_3939c53fa8951d83e2c9d8384703fdfe = L.marker(
+                [38.051138, -121.3513],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_b1e0c2077e5d67ff40c8549a76927d63 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #fffd00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_3939c53fa8951d83e2c9d8384703fdfe.setIcon(div_icon_b1e0c2077e5d67ff40c8549a76927d63);
+        
+    
+        var popup_2fe6b7d3c6cfb306ce0b358f5d9b978d = L.popup({"maxWidth": 300});
+
+        
+            var html_65c96c23292fb352bedbbe4cfb2b40ba = $(`<div id="html_65c96c23292fb352bedbbe4cfb2b40ba" style="width: 100.0%; height: 100.0%;"><b>Bear Creek High</b><br>10555 Thornton Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 66.8%</div>`)[0];
+            popup_2fe6b7d3c6cfb306ce0b358f5d9b978d.setContent(html_65c96c23292fb352bedbbe4cfb2b40ba);
+        
+
+        marker_3939c53fa8951d83e2c9d8384703fdfe.bindPopup(popup_2fe6b7d3c6cfb306ce0b358f5d9b978d)
+        ;
+
+        
+    
+    
+            var marker_c5d94358b6c0de9b24b9437d6e232514 = L.marker(
+                [38.036042, -121.33968],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_d657fe8e2a356e478a93a248ab7e16c4 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2c00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_c5d94358b6c0de9b24b9437d6e232514.setIcon(div_icon_d657fe8e2a356e478a93a248ab7e16c4);
+        
+    
+        var popup_e28e81695643f9d7dfcbaeef0c6f166a = L.popup({"maxWidth": 300});
+
+        
+            var html_d063917d1884b2366844eeb7f1aafa54 = $(`<div id="html_d063917d1884b2366844eeb7f1aafa54" style="width: 100.0%; height: 100.0%;"><b>Plaza Robles Continuation High</b><br>9434 Thornton Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 21.9%</div>`)[0];
+            popup_e28e81695643f9d7dfcbaeef0c6f166a.setContent(html_d063917d1884b2366844eeb7f1aafa54);
+        
+
+        marker_c5d94358b6c0de9b24b9437d6e232514.bindPopup(popup_e28e81695643f9d7dfcbaeef0c6f166a)
+        ;
+
+        
+    
+    
+            var marker_35ead9138d547d85fee875b167ef45da = L.marker(
+                [37.996622, -121.31485],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_1cec6de6c01ffe8b239ac9c44deababa = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #008000ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_35ead9138d547d85fee875b167ef45da.setIcon(div_icon_1cec6de6c01ffe8b239ac9c44deababa);
+        
+    
+        var popup_af45d4e390e88e67fd8a010cd16782ea = L.popup({"maxWidth": 300});
+
+        
+            var html_6dab2e54693318afb2b5c80c27a9951d = $(`<div id="html_6dab2e54693318afb2b5c80c27a9951d" style="width: 100.0%; height: 100.0%;"><b>Middle College High</b><br>5151 Pacific Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 93.8%</div>`)[0];
+            popup_af45d4e390e88e67fd8a010cd16782ea.setContent(html_6dab2e54693318afb2b5c80c27a9951d);
+        
+
+        marker_35ead9138d547d85fee875b167ef45da.bindPopup(popup_af45d4e390e88e67fd8a010cd16782ea)
+        ;
+
+        
+    
+    
+            var marker_998b767d61cd5af6126976585b775ba9 = L.marker(
+                [37.901023, -121.30851],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_828d5b20451c1f089ebcbada8fd8bf37 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #fffa00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_998b767d61cd5af6126976585b775ba9.setIcon(div_icon_828d5b20451c1f089ebcbada8fd8bf37);
+        
+    
+        var popup_3c8d1e7c8a3e0ec0e67f7ecc898e88ca = L.popup({"maxWidth": 300});
+
+        
+            var html_8d6595f89160628585d08273c75fdb9f = $(`<div id="html_8d6595f89160628585d08273c75fdb9f" style="width: 100.0%; height: 100.0%;"><b>Weston Ranch High</b><br>4606 McCuen Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Manteca Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 65.8%</div>`)[0];
+            popup_3c8d1e7c8a3e0ec0e67f7ecc898e88ca.setContent(html_8d6595f89160628585d08273c75fdb9f);
+        
+
+        marker_998b767d61cd5af6126976585b775ba9.bindPopup(popup_3c8d1e7c8a3e0ec0e67f7ecc898e88ca)
+        ;
+
+        
+    
+    
+            var marker_b529e121d0275ac8021b7143bbde4fd9 = L.marker(
+                [37.899894, -121.30854],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_d00bc7dbcf3afbdf4f9f2717b4b6a5a7 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff3700ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_b529e121d0275ac8021b7143bbde4fd9.setIcon(div_icon_d00bc7dbcf3afbdf4f9f2717b4b6a5a7);
+        
+    
+        var popup_91951eaccfca5d778bd18a274ff96a8d = L.popup({"maxWidth": 300});
+
+        
+            var html_01c6db9494fa6d48d6a8742080748de3 = $(`<div id="html_01c6db9494fa6d48d6a8742080748de3" style="width: 100.0%; height: 100.0%;"><b>New Vision High</b><br>4726 McCuen Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Manteca Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 23.6%</div>`)[0];
+            popup_91951eaccfca5d778bd18a274ff96a8d.setContent(html_01c6db9494fa6d48d6a8742080748de3);
+        
+
+        marker_b529e121d0275ac8021b7143bbde4fd9.bindPopup(popup_91951eaccfca5d778bd18a274ff96a8d)
+        ;
+
+        
+    
+    
+            var marker_287378730cdd29d24dbafd6af9613ef2 = L.marker(
+                [37.950914, -121.29687],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_02c9725b15d4ef6c7ae0dabd34f3bc84 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffd100ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_287378730cdd29d24dbafd6af9613ef2.setIcon(div_icon_02c9725b15d4ef6c7ae0dabd34f3bc84);
+        
+    
+        var popup_aca3f090c93f54d9e638a781fbf143c7 = L.popup({"maxWidth": 300});
+
+        
+            var html_98f56522933118cf76d243d62d88379f = $(`<div id="html_98f56522933118cf76d243d62d88379f" style="width: 100.0%; height: 100.0%;"><b>No Data</b><br>56 South Lincoln Street, Stockton<br><b>Charter:</b> No Data<br><b>Geographic/Host District:</b> nan<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 53.8%</div>`)[0];
+            popup_aca3f090c93f54d9e638a781fbf143c7.setContent(html_98f56522933118cf76d243d62d88379f);
+        
+
+        marker_287378730cdd29d24dbafd6af9613ef2.bindPopup(popup_aca3f090c93f54d9e638a781fbf143c7)
+        ;
+
+        
+    
+    
+            var marker_becf7f8bb0ba1536c56cf8fc189c50c2 = L.marker(
+                [38.0131, -121.26811],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_6fadf284ad1cb000d21e823ddb2f3e70 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffd900ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_becf7f8bb0ba1536c56cf8fc189c50c2.setIcon(div_icon_6fadf284ad1cb000d21e823ddb2f3e70);
+        
+    
+        var popup_15cd0fdb927c3a81ac6bf7fec50230c3 = L.popup({"maxWidth": 300});
+
+        
+            var html_488600f159832dc4908f98f182286a41 = $(`<div id="html_488600f159832dc4908f98f182286a41" style="width: 100.0%; height: 100.0%;"><b>Cesar Chavez High</b><br>2929 Windflower Lane, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 56.3%</div>`)[0];
+            popup_15cd0fdb927c3a81ac6bf7fec50230c3.setContent(html_488600f159832dc4908f98f182286a41);
+        
+
+        marker_becf7f8bb0ba1536c56cf8fc189c50c2.bindPopup(popup_15cd0fdb927c3a81ac6bf7fec50230c3)
+        ;
+
+        
+    
+    
+            var marker_abc17ae00026e8e1b5b195a15a94ab09 = L.marker(
+                [37.935728, -121.2633],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_0f460e2446b12ebfdc3cc0736d5e05ce = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffe800ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_abc17ae00026e8e1b5b195a15a94ab09.setIcon(div_icon_0f460e2446b12ebfdc3cc0736d5e05ce);
+        
+    
+        var popup_4640a6453a541d4833e026e06837ba4c = L.popup({"maxWidth": 300});
+
+        
+            var html_f4f3e430901b8fb5c0fc9d7363469668 = $(`<div id="html_f4f3e430901b8fb5c0fc9d7363469668" style="width: 100.0%; height: 100.0%;"><b>Edward C. Merlo Institute of Environmental Studies</b><br>1670 East Sixth Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 60.5%</div>`)[0];
+            popup_4640a6453a541d4833e026e06837ba4c.setContent(html_f4f3e430901b8fb5c0fc9d7363469668);
+        
+
+        marker_abc17ae00026e8e1b5b195a15a94ab09.bindPopup(popup_4640a6453a541d4833e026e06837ba4c)
+        ;
+
+        
+    
+    
+            var marker_6ce7e95c64c0dc86242135903b6e274e = L.marker(
+                [37.950792, -121.29603],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_7704b1a4272bf69d8bdf4324b387fbea = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff4300ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_6ce7e95c64c0dc86242135903b6e274e.setIcon(div_icon_7704b1a4272bf69d8bdf4324b387fbea);
+        
+    
+        var popup_55dfd2ccd726037951ea1648d455b9e0 = L.popup({"maxWidth": 300});
+
+        
+            var html_ae6572e19cbf346009c1869276eaf552 = $(`<div id="html_ae6572e19cbf346009c1869276eaf552" style="width: 100.0%; height: 100.0%;"><b>Stockton High</b><br>22 South Van Buren Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 25.6%</div>`)[0];
+            popup_55dfd2ccd726037951ea1648d455b9e0.setContent(html_ae6572e19cbf346009c1869276eaf552);
+        
+
+        marker_6ce7e95c64c0dc86242135903b6e274e.bindPopup(popup_55dfd2ccd726037951ea1648d455b9e0)
+        ;
+
+        
+    
+    
+            var marker_9cf718f1651c3e626c04ec2e81e1e521 = L.marker(
+                [37.956161, -121.2765],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_06073baf35f0b49aae5b32c65f665a01 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff0d00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_9cf718f1651c3e626c04ec2e81e1e521.setIcon(div_icon_06073baf35f0b49aae5b32c65f665a01);
+        
+    
+        var popup_c673a07c3ed21b39fb06d0c2755572c0 = L.popup({"maxWidth": 300});
+
+        
+            var html_f01ce46103cfa3ff297a500e30455a98 = $(`<div id="html_f01ce46103cfa3ff297a500e30455a98" style="width: 100.0%; height: 100.0%;"><b>Jane Frederick High</b><br>1141 East Weber Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 16.9%</div>`)[0];
+            popup_c673a07c3ed21b39fb06d0c2755572c0.setContent(html_f01ce46103cfa3ff297a500e30455a98);
+        
+
+        marker_9cf718f1651c3e626c04ec2e81e1e521.bindPopup(popup_c673a07c3ed21b39fb06d0c2755572c0)
+        ;
+
+        
+    
+    
+            var marker_8c41144cb61ac867a7411fe4b53556ef = L.marker(
+                [37.952812, -121.29522],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_c515aac7aaea608a2049cc6b743d34b2 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #f1f800ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_8c41144cb61ac867a7411fe4b53556ef.setIcon(div_icon_c515aac7aaea608a2049cc6b743d34b2);
+        
+    
+        var popup_0bffe190a5cfbe0a4c83b0dc47864166 = L.popup({"maxWidth": 300});
+
+        
+            var html_82d56c5197cbddd72b3b3469ce611707 = $(`<div id="html_82d56c5197cbddd72b3b3469ce611707" style="width: 100.0%; height: 100.0%;"><b>Weber Institute</b><br>302 West Weber Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 69.0%</div>`)[0];
+            popup_0bffe190a5cfbe0a4c83b0dc47864166.setContent(html_82d56c5197cbddd72b3b3469ce611707);
+        
+
+        marker_8c41144cb61ac867a7411fe4b53556ef.bindPopup(popup_0bffe190a5cfbe0a4c83b0dc47864166)
+        ;
+
+        
+    
+    
+            var marker_6277abedaf1f7174da6bb41dc3f853ac = L.marker(
+                [37.938392, -121.28867],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_3ce005f4fc7acf27508a01ef7fc9152d = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffbc00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_6277abedaf1f7174da6bb41dc3f853ac.setIcon(div_icon_3ce005f4fc7acf27508a01ef7fc9152d);
+        
+    
+        var popup_1e9256296a146a2b405ac4b1c7a8285d = L.popup({"maxWidth": 300});
+
+        
+            var html_5bb9170c8d0b2b96d8d6a986a83dde54 = $(`<div id="html_5bb9170c8d0b2b96d8d6a986a83dde54" style="width: 100.0%; height: 100.0%;"><b>Edison High</b><br>100 West Drive Martin Luther King Boulevard, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 47.7%</div>`)[0];
+            popup_1e9256296a146a2b405ac4b1c7a8285d.setContent(html_5bb9170c8d0b2b96d8d6a986a83dde54);
+        
+
+        marker_6277abedaf1f7174da6bb41dc3f853ac.bindPopup(popup_1e9256296a146a2b405ac4b1c7a8285d)
+        ;
+
+        
+    
+    
+            var marker_29d52849c7073cdb3b3bfdd893610cf9 = L.marker(
+                [37.972844, -121.2367],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_c593679c4f50fc3026d3944a67ffe919 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffb800ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_29d52849c7073cdb3b3bfdd893610cf9.setIcon(div_icon_c593679c4f50fc3026d3944a67ffe919);
+        
+    
+        var popup_39a5cd1e113b983e14d13abb1f9cff6a = L.popup({"maxWidth": 300});
+
+        
+            var html_99adce0640a68677da6defcc28bc489d = $(`<div id="html_99adce0640a68677da6defcc28bc489d" style="width: 100.0%; height: 100.0%;"><b>Franklin High</b><br>4600 East Fremont Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 46.5%</div>`)[0];
+            popup_39a5cd1e113b983e14d13abb1f9cff6a.setContent(html_99adce0640a68677da6defcc28bc489d);
+        
+
+        marker_29d52849c7073cdb3b3bfdd893610cf9.bindPopup(popup_39a5cd1e113b983e14d13abb1f9cff6a)
+        ;
+
+        
+    
+    
+            var marker_d8c8ed9c30f93ae02a310902737256dc = L.marker(
+                [37.981731, -121.32241],
+                {}
+            ).addTo(feature_group_a56731ded1ddac993af57f4677d4090a);
+        
+    
+            var div_icon_496f3ae67addfccc9c65c88e9c3db0b8 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffbc00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_d8c8ed9c30f93ae02a310902737256dc.setIcon(div_icon_496f3ae67addfccc9c65c88e9c3db0b8);
+        
+    
+        var popup_c821d7dc2bb11fc75f94c3ca9db1a0c2 = L.popup({"maxWidth": 300});
+
+        
+            var html_a0e2b9b331d1ff7e554fd82004dd48bf = $(`<div id="html_a0e2b9b331d1ff7e554fd82004dd48bf" style="width: 100.0%; height: 100.0%;"><b>Stagg Senior High</b><br>1621 Brookside Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>College Matriculation Rate:</b> 47.8%</div>`)[0];
+            popup_c821d7dc2bb11fc75f94c3ca9db1a0c2.setContent(html_a0e2b9b331d1ff7e554fd82004dd48bf);
+        
+
+        marker_d8c8ed9c30f93ae02a310902737256dc.bindPopup(popup_c821d7dc2bb11fc75f94c3ca9db1a0c2)
+        ;
+
+        
+    
+    
+            var layer_control_880ec669b1f0273a3123aca4920a930d = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_c61aacc94013f583e473065d71b58e98,
+                },
+                overlays :  {
+                    "Charter Schools" : feature_group_21402902530835f78cb9190072e8f5cf,
+                    "District Schools" : feature_group_a56731ded1ddac993af57f4677d4090a,
+                },
+            };
+            L.control.layers(
+                layer_control_880ec669b1f0273a3123aca4920a930d.base_layers,
+                layer_control_880ec669b1f0273a3123aca4920a930d.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_d89aa994c607d6246290cdb55a7d831d);
+        
+    
+    var color_map_00f6b4367ed42b8d5aa1924b81c4deec = {};
+
+    
+    color_map_00f6b4367ed42b8d5aa1924b81c4deec.color = d3.scale.threshold()
+              .domain([14.8, 14.958316633266534, 15.116633266533066, 15.2749498997996, 15.433266533066133, 15.591583166332667, 15.749899799599199, 15.908216432865732, 16.066533066132266, 16.2248496993988, 16.383166332665333, 16.541482965931863, 16.699799599198396, 16.85811623246493, 17.016432865731463, 17.174749498997997, 17.33306613226453, 17.491382765531064, 17.649699398797594, 17.808016032064128, 17.96633266533066, 18.124649298597195, 18.28296593186373, 18.441282565130262, 18.599599198396795, 18.757915831663325, 18.916232464929863, 19.074549098196393, 19.232865731462926, 19.39118236472946, 19.549498997995993, 19.707815631262527, 19.866132264529057, 20.024448897795594, 20.182765531062124, 20.341082164328657, 20.49939879759519, 20.657715430861725, 20.816032064128258, 20.974348697394788, 21.132665330661325, 21.290981963927855, 21.44929859719439, 21.607615230460922, 21.765931863727456, 21.92424849699399, 22.082565130260523, 22.240881763527057, 22.399198396793587, 22.55751503006012, 22.715831663326654, 22.874148296593187, 23.03246492985972, 23.19078156312625, 23.349098196392788, 23.507414829659318, 23.665731462925855, 23.824048096192385, 23.98236472945892, 24.140681362725452, 24.298997995991982, 24.45731462925852, 24.61563126252505, 24.773947895791586, 24.932264529058116, 25.09058116232465, 25.248897795591184, 25.407214428857714, 25.56553106212425, 25.72384769539078, 25.882164328657318, 26.040480961923848, 26.19879759519038, 26.357114228456915, 26.51543086172345, 26.673747494989982, 26.832064128256512, 26.99038076152305, 27.14869739478958, 27.307014028056113, 27.465330661322646, 27.62364729458918, 27.781963927855713, 27.940280561122243, 28.09859719438878, 28.25691382765531, 28.415230460921844, 28.573547094188378, 28.73186372745491, 28.890180360721445, 29.048496993987975, 29.206813627254512, 29.365130260521042, 29.523446893787575, 29.68176352705411, 29.840080160320642, 29.998396793587176, 30.156713426853706, 30.315030060120243, 30.473346693386773, 30.631663326653307, 30.78997995991984, 30.948296593186374, 31.106613226452907, 31.26492985971944, 31.42324649298597, 31.581563126252505, 31.739879759519038, 31.89819639278557, 32.0565130260521, 32.21482965931864, 32.373146292585176, 32.531462925851706, 32.689779559118236, 32.84809619238477, 33.0064128256513, 33.16472945891783, 33.32304609218437, 33.48136272545091, 33.63967935871744, 33.79799599198397, 33.956312625250504, 34.114629258517034, 34.272945891783564, 34.4312625250501, 34.58957915831664, 34.74789579158317, 34.9062124248497, 35.064529058116236, 35.222845691382766, 35.381162324649296, 35.53947895791583, 35.69779559118237, 35.8561122244489, 36.01442885771543, 36.17274549098197, 36.3310621242485, 36.48937875751503, 36.647695390781564, 36.8060120240481, 36.96432865731463, 37.12264529058116, 37.2809619238477, 37.43927855711423, 37.59759519038076, 37.755911823647295, 37.91422845691383, 38.07254509018036, 38.23086172344689, 38.38917835671343, 38.54749498997996, 38.70581162324649, 38.86412825651303, 39.022444889779564, 39.180761523046094, 39.339078156312624, 39.49739478957916, 39.65571142284569, 39.81402805611222, 39.97234468937876, 40.130661322645295, 40.288977955911825, 40.447294589178355, 40.60561122244489, 40.76392785571142, 40.92224448897795, 41.08056112224449, 41.23887775551103, 41.39719438877756, 41.55551102204409, 41.713827655310624, 41.872144288577154, 42.030460921843684, 42.18877755511022, 42.34709418837676, 42.50541082164329, 42.66372745490982, 42.822044088176355, 42.980360721442885, 43.138677354709415, 43.29699398797595, 43.45531062124249, 43.61362725450902, 43.77194388777555, 43.93026052104209, 44.08857715430862, 44.24689378757515, 44.405210420841684, 44.56352705410822, 44.72184368737475, 44.88016032064128, 45.03847695390782, 45.19679358717435, 45.35511022044088, 45.513426853707415, 45.67174348697395, 45.83006012024048, 45.98837675350701, 46.14669338677355, 46.30501002004008, 46.46332665330661, 46.621643286573146, 46.77995991983968, 46.938276553106206, 47.09659318637274, 47.25490981963928, 47.41322645290582, 47.57154308617234, 47.72985971943888, 47.888176352705415, 48.04649298597194, 48.204809619238475, 48.36312625250501, 48.52144288577155, 48.67975951903807, 48.83807615230461, 48.996392785571146, 49.15470941883767, 49.313026052104206, 49.47134268537074, 49.62965931863728, 49.7879759519038, 49.94629258517034, 50.10460921843688, 50.262925851703415, 50.42124248496994, 50.579559118236475, 50.73787575150301, 50.896192384769535, 51.05450901803607, 51.21282565130261, 51.371142284569146, 51.52945891783567, 51.687775551102206, 51.84609218436874, 52.004408817635266, 52.1627254509018, 52.32104208416834, 52.47935871743488, 52.6376753507014, 52.79599198396794, 52.954308617234474, 53.112625250501, 53.270941883767534, 53.42925851703407, 53.58757515030061, 53.74589178356713, 53.90420841683367, 54.062525050100206, 54.22084168336673, 54.379158316633266, 54.5374749498998, 54.69579158316634, 54.85410821643286, 55.0124248496994, 55.17074148296594, 55.32905811623246, 55.487374749499, 55.645691382765534, 55.80400801603207, 55.962324649298594, 56.12064128256513, 56.27895791583167, 56.43727454909819, 56.59559118236473, 56.753907815631266, 56.9122244488978, 57.070541082164326, 57.22885771543086, 57.3871743486974, 57.54549098196392, 57.70380761523046, 57.862124248497, 58.020440881763534, 58.17875751503006, 58.337074148296594, 58.49539078156313, 58.653707414829654, 58.81202404809619, 58.97034068136273, 59.128657314629265, 59.28697394789579, 59.445290581162325, 59.60360721442886, 59.761923847695385, 59.92024048096192, 60.07855711422846, 60.236873747495, 60.39519038076152, 60.55350701402806, 60.711823647294594, 60.87014028056112, 61.028456913827654, 61.18677354709419, 61.34509018036073, 61.50340681362725, 61.66172344689379, 61.820040080160325, 61.97835671342685, 62.136673346693385, 62.29498997995992, 62.45330661322646, 62.61162324649298, 62.76993987975952, 62.92825651302606, 63.08657314629258, 63.24488977955912, 63.403206412825654, 63.56152304609219, 63.719839679358714, 63.87815631262525, 64.03647294589179, 64.19478957915831, 64.35310621242485, 64.51142284569138, 64.66973947895792, 64.82805611222444, 64.98637274549098, 65.14468937875752, 65.30300601202404, 65.46132264529058, 65.61963927855712, 65.77795591182365, 65.93627254509018, 66.09458917835671, 66.25290581162325, 66.41122244488977, 66.56953907815631, 66.72785571142285, 66.88617234468938, 67.04448897795591, 67.20280561122244, 67.36112224448898, 67.5194388777555, 67.67775551102204, 67.83607214428858, 67.99438877755512, 68.15270541082164, 68.31102204408818, 68.46933867735471, 68.62765531062124, 68.78597194388777, 68.94428857715431, 69.10260521042085, 69.26092184368737, 69.41923847695391, 69.57755511022044, 69.73587174348698, 69.8941883767535, 70.05250501002004, 70.21082164328658, 70.3691382765531, 70.52745490981964, 70.68577154308618, 70.84408817635271, 71.00240480961924, 71.16072144288577, 71.31903807615231, 71.47735470941883, 71.63567134268537, 71.79398797595191, 71.95230460921844, 72.11062124248497, 72.2689378757515, 72.42725450901804, 72.58557114228456, 72.7438877755511, 72.90220440881764, 73.06052104208418, 73.2188376753507, 73.37715430861724, 73.53547094188377, 73.6937875751503, 73.85210420841683, 74.01042084168337, 74.1687374749499, 74.32705410821643, 74.48537074148297, 74.6436873747495, 74.80200400801603, 74.96032064128256, 75.1186372745491, 75.27695390781564, 75.43527054108216, 75.5935871743487, 75.75190380761524, 75.91022044088176, 76.0685370741483, 76.22685370741483, 76.38517034068137, 76.54348697394789, 76.70180360721443, 76.86012024048097, 77.01843687374749, 77.17675350701403, 77.33507014028056, 77.4933867735471, 77.65170340681362, 77.81002004008016, 77.9683366733467, 78.12665330661322, 78.28496993987976, 78.4432865731463, 78.60160320641283, 78.75991983967936, 78.91823647294589, 79.07655310621242, 79.23486973947895, 79.39318637274549, 79.55150300601203, 79.70981963927855, 79.86813627254509, 80.02645290581162, 80.18476953907815, 80.34308617234468, 80.50140280561122, 80.65971943887776, 80.81803607214428, 80.97635270541082, 81.13466933867736, 81.29298597194388, 81.45130260521042, 81.60961923847695, 81.76793587174349, 81.92625250501001, 82.08456913827655, 82.24288577154309, 82.40120240480961, 82.55951903807615, 82.71783567134268, 82.87615230460922, 83.03446893787574, 83.19278557114228, 83.35110220440882, 83.50941883767534, 83.66773547094188, 83.82605210420842, 83.98436873747495, 84.14268537074148, 84.30100200400801, 84.45931863727455, 84.61763527054109, 84.77595190380761, 84.93426853707415, 85.09258517034068, 85.2509018036072, 85.40921843687374, 85.56753507014028, 85.72585170340682, 85.88416833667334, 86.04248496993988, 86.20080160320641, 86.35911823647294, 86.51743486973947, 86.67575150300601, 86.83406813627255, 86.99238476953907, 87.15070140280561, 87.30901803607215, 87.46733466933867, 87.6256513026052, 87.78396793587174, 87.94228456913828, 88.1006012024048, 88.25891783567134, 88.41723446893788, 88.5755511022044, 88.73386773547094, 88.89218436873747, 89.05050100200401, 89.20881763527053, 89.36713426853707, 89.52545090180361, 89.68376753507013, 89.84208416833667, 90.0004008016032, 90.15871743486974, 90.31703406813627, 90.4753507014028, 90.63366733466934, 90.79198396793586, 90.9503006012024, 91.10861723446894, 91.26693386773547, 91.425250501002, 91.58356713426853, 91.74188376753507, 91.9002004008016, 92.05851703406813, 92.21683366733467, 92.3751503006012, 92.53346693386773, 92.69178356713427, 92.8501002004008, 93.00841683366733, 93.16673346693386, 93.3250501002004, 93.48336673346694, 93.64168336673346, 93.8])
+              .range(['#ff0000ff', '#ff0000ff', '#ff0100ff', '#ff0200ff', '#ff0300ff', '#ff0400ff', '#ff0500ff', '#ff0600ff', '#ff0700ff', '#ff0800ff', '#ff0900ff', '#ff0a00ff', '#ff0b00ff', '#ff0c00ff', '#ff0d00ff', '#ff0e00ff', '#ff0f00ff', '#ff1000ff', '#ff1100ff', '#ff1200ff', '#ff1300ff', '#ff1400ff', '#ff1500ff', '#ff1600ff', '#ff1700ff', '#ff1800ff', '#ff1900ff', '#ff1a00ff', '#ff1b00ff', '#ff1c00ff', '#ff1d00ff', '#ff1e00ff', '#ff1f00ff', '#ff2000ff', '#ff2100ff', '#ff2200ff', '#ff2300ff', '#ff2400ff', '#ff2500ff', '#ff2600ff', '#ff2700ff', '#ff2800ff', '#ff2900ff', '#ff2a00ff', '#ff2b00ff', '#ff2c00ff', '#ff2d00ff', '#ff2e00ff', '#ff2f00ff', '#ff3000ff', '#ff3100ff', '#ff3200ff', '#ff3300ff', '#ff3400ff', '#ff3500ff', '#ff3600ff', '#ff3700ff', '#ff3800ff', '#ff3900ff', '#ff3a00ff', '#ff3b00ff', '#ff3c00ff', '#ff3d00ff', '#ff3e00ff', '#ff3f00ff', '#ff4000ff', '#ff4100ff', '#ff4200ff', '#ff4300ff', '#ff4400ff', '#ff4500ff', '#ff4600ff', '#ff4700ff', '#ff4800ff', '#ff4900ff', '#ff4a00ff', '#ff4b00ff', '#ff4c00ff', '#ff4d00ff', '#ff4e00ff', '#ff4f00ff', '#ff5000ff', '#ff5100ff', '#ff5200ff', '#ff5300ff', '#ff5400ff', '#ff5500ff', '#ff5600ff', '#ff5700ff', '#ff5800ff', '#ff5900ff', '#ff5a00ff', '#ff5b00ff', '#ff5c00ff', '#ff5d00ff', '#ff5e00ff', '#ff5f00ff', '#ff6000ff', '#ff6100ff', '#ff6200ff', '#ff6300ff', '#ff6400ff', '#ff6500ff', '#ff6600ff', '#ff6700ff', '#ff6800ff', '#ff6900ff', '#ff6a00ff', '#ff6b00ff', '#ff6c00ff', '#ff6d00ff', '#ff6e00ff', '#ff6f00ff', '#ff7000ff', '#ff7100ff', '#ff7200ff', '#ff7300ff', '#ff7400ff', '#ff7500ff', '#ff7600ff', '#ff7700ff', '#ff7800ff', '#ff7900ff', '#ff7a00ff', '#ff7b00ff', '#ff7c00ff', '#ff7d00ff', '#ff7e00ff', '#ff7f00ff', '#ff8000ff', '#ff8100ff', '#ff8200ff', '#ff8300ff', '#ff8400ff', '#ff8500ff', '#ff8600ff', '#ff8700ff', '#ff8800ff', '#ff8900ff', '#ff8a00ff', '#ff8b00ff', '#ff8c00ff', '#ff8d00ff', '#ff8e00ff', '#ff8f00ff', '#ff9000ff', '#ff9100ff', '#ff9200ff', '#ff9300ff', '#ff9400ff', '#ff9500ff', '#ff9600ff', '#ff9700ff', '#ff9800ff', '#ff9900ff', '#ff9a00ff', '#ff9b00ff', '#ff9c00ff', '#ff9d00ff', '#ff9e00ff', '#ff9f00ff', '#ffa000ff', '#ffa100ff', '#ffa200ff', '#ffa300ff', '#ffa400ff', '#ffa500ff', '#ffa600ff', '#ffa600ff', '#ffa700ff', '#ffa700ff', '#ffa800ff', '#ffa800ff', '#ffa900ff', '#ffa900ff', '#ffaa00ff', '#ffaa00ff', '#ffab00ff', '#ffab00ff', '#ffac00ff', '#ffad00ff', '#ffad00ff', '#ffae00ff', '#ffae00ff', '#ffaf00ff', '#ffaf00ff', '#ffb000ff', '#ffb000ff', '#ffb100ff', '#ffb100ff', '#ffb200ff', '#ffb300ff', '#ffb300ff', '#ffb400ff', '#ffb400ff', '#ffb500ff', '#ffb500ff', '#ffb600ff', '#ffb600ff', '#ffb700ff', '#ffb700ff', '#ffb800ff', '#ffb900ff', '#ffb900ff', '#ffba00ff', '#ffba00ff', '#ffbb00ff', '#ffbb00ff', '#ffbc00ff', '#ffbc00ff', '#ffbd00ff', '#ffbd00ff', '#ffbe00ff', '#ffbe00ff', '#ffbf00ff', '#ffc000ff', '#ffc000ff', '#ffc100ff', '#ffc100ff', '#ffc200ff', '#ffc200ff', '#ffc300ff', '#ffc300ff', '#ffc400ff', '#ffc400ff', '#ffc500ff', '#ffc600ff', '#ffc600ff', '#ffc700ff', '#ffc700ff', '#ffc800ff', '#ffc800ff', '#ffc900ff', '#ffc900ff', '#ffca00ff', '#ffca00ff', '#ffcb00ff', '#ffcc00ff', '#ffcc00ff', '#ffcd00ff', '#ffcd00ff', '#ffce00ff', '#ffce00ff', '#ffcf00ff', '#ffcf00ff', '#ffd000ff', '#ffd000ff', '#ffd100ff', '#ffd200ff', '#ffd200ff', '#ffd300ff', '#ffd300ff', '#ffd400ff', '#ffd400ff', '#ffd500ff', '#ffd500ff', '#ffd600ff', '#ffd600ff', '#ffd700ff', '#ffd700ff', '#ffd800ff', '#ffd900ff', '#ffd900ff', '#ffda00ff', '#ffda00ff', '#ffdb00ff', '#ffdb00ff', '#ffdc00ff', '#ffdc00ff', '#ffdd00ff', '#ffdd00ff', '#ffde00ff', '#ffdf00ff', '#ffdf00ff', '#ffe000ff', '#ffe000ff', '#ffe100ff', '#ffe100ff', '#ffe200ff', '#ffe200ff', '#ffe300ff', '#ffe300ff', '#ffe400ff', '#ffe500ff', '#ffe500ff', '#ffe600ff', '#ffe600ff', '#ffe700ff', '#ffe700ff', '#ffe800ff', '#ffe800ff', '#ffe900ff', '#ffe900ff', '#ffea00ff', '#ffea00ff', '#ffeb00ff', '#ffec00ff', '#ffec00ff', '#ffed00ff', '#ffed00ff', '#ffee00ff', '#ffee00ff', '#ffef00ff', '#ffef00ff', '#fff000ff', '#fff000ff', '#fff100ff', '#fff200ff', '#fff200ff', '#fff300ff', '#fff300ff', '#fff400ff', '#fff400ff', '#fff500ff', '#fff500ff', '#fff600ff', '#fff600ff', '#fff700ff', '#fff800ff', '#fff800ff', '#fff900ff', '#fff900ff', '#fffa00ff', '#fffa00ff', '#fffb00ff', '#fffb00ff', '#fffc00ff', '#fffc00ff', '#fffd00ff', '#fffe00ff', '#fffe00ff', '#ffff00ff', '#ffff00ff', '#ffff00ff', '#fdfe00ff', '#fcfe00ff', '#fafd00ff', '#f9fc00ff', '#f7fb00ff', '#f6fb00ff', '#f4fa00ff', '#f3f900ff', '#f1f800ff', '#f0f800ff', '#eef700ff', '#edf600ff', '#ebf500ff', '#e9f500ff', '#e8f400ff', '#e6f300ff', '#e5f200ff', '#e3f100ff', '#e2f100ff', '#e0f000ff', '#dfef00ff', '#ddee00ff', '#dcee00ff', '#daed00ff', '#d9ec00ff', '#d7eb00ff', '#d5eb00ff', '#d4ea00ff', '#d2e900ff', '#d1e800ff', '#cfe700ff', '#cee700ff', '#cce600ff', '#cbe500ff', '#c9e400ff', '#c8e400ff', '#c6e300ff', '#c5e200ff', '#c3e100ff', '#c1e100ff', '#c0e000ff', '#bedf00ff', '#bdde00ff', '#bbde00ff', '#badd00ff', '#b8dc00ff', '#b7db00ff', '#b5da00ff', '#b4da00ff', '#b2d900ff', '#b0d800ff', '#afd700ff', '#add700ff', '#acd600ff', '#aad500ff', '#a9d400ff', '#a7d400ff', '#a6d300ff', '#a4d200ff', '#a3d100ff', '#a1d000ff', '#a0d000ff', '#9ecf00ff', '#9cce00ff', '#9bcd00ff', '#99cd00ff', '#98cc00ff', '#96cb00ff', '#95ca00ff', '#93ca00ff', '#92c900ff', '#90c800ff', '#8fc700ff', '#8dc700ff', '#8cc600ff', '#8ac500ff', '#88c400ff', '#87c300ff', '#85c300ff', '#84c200ff', '#82c100ff', '#81c000ff', '#7fc000ff', '#7ebf00ff', '#7cbe00ff', '#7bbd00ff', '#79bd00ff', '#78bc00ff', '#76bb00ff', '#74ba00ff', '#73b900ff', '#71b900ff', '#70b800ff', '#6eb700ff', '#6db600ff', '#6bb600ff', '#6ab500ff', '#68b400ff', '#67b300ff', '#65b300ff', '#64b200ff', '#62b100ff', '#60b000ff', '#5fb000ff', '#5daf00ff', '#5cae00ff', '#5aad00ff', '#59ac00ff', '#57ac00ff', '#56ab00ff', '#54aa00ff', '#53a900ff', '#51a900ff', '#50a800ff', '#4ea700ff', '#4ca600ff', '#4ba600ff', '#49a500ff', '#48a400ff', '#46a300ff', '#45a200ff', '#43a200ff', '#42a100ff', '#40a000ff', '#3f9f00ff', '#3d9f00ff', '#3c9e00ff', '#3a9d00ff', '#389c00ff', '#379c00ff', '#359b00ff', '#349a00ff', '#329900ff', '#319900ff', '#2f9800ff', '#2e9700ff', '#2c9600ff', '#2b9500ff', '#299500ff', '#289400ff', '#269300ff', '#249200ff', '#239200ff', '#219100ff', '#209000ff', '#1e8f00ff', '#1d8f00ff', '#1b8e00ff', '#1a8d00ff', '#188c00ff', '#178b00ff', '#158b00ff', '#148a00ff', '#128900ff', '#108800ff', '#0f8800ff', '#0d8700ff', '#0c8600ff', '#0a8500ff', '#098500ff', '#078400ff', '#068300ff', '#048200ff', '#038200ff', '#018100ff', '#008000ff']);
+    
+
+    color_map_00f6b4367ed42b8d5aa1924b81c4deec.x = d3.scale.linear()
+              .domain([14.8, 93.8])
+              .range([0, 450 - 50]);
+
+    color_map_00f6b4367ed42b8d5aa1924b81c4deec.legend = L.control({position: 'topright'});
+    color_map_00f6b4367ed42b8d5aa1924b81c4deec.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_00f6b4367ed42b8d5aa1924b81c4deec.legend.addTo(map_d89aa994c607d6246290cdb55a7d831d);
+
+    color_map_00f6b4367ed42b8d5aa1924b81c4deec.xAxis = d3.svg.axis()
+        .scale(color_map_00f6b4367ed42b8d5aa1924b81c4deec.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([14.8, 41.13333333333333, 67.46666666666667, 93.8]);
+
+    color_map_00f6b4367ed42b8d5aa1924b81c4deec.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_00f6b4367ed42b8d5aa1924b81c4deec.g = color_map_00f6b4367ed42b8d5aa1924b81c4deec.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_00f6b4367ed42b8d5aa1924b81c4deec.g.selectAll("rect")
+        .data(color_map_00f6b4367ed42b8d5aa1924b81c4deec.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_00f6b4367ed42b8d5aa1924b81c4deec.x(color_map_00f6b4367ed42b8d5aa1924b81c4deec.color.domain()[i - 1]) : color_map_00f6b4367ed42b8d5aa1924b81c4deec.x.range()[0],
+            x1: i < color_map_00f6b4367ed42b8d5aa1924b81c4deec.color.domain().length ? color_map_00f6b4367ed42b8d5aa1924b81c4deec.x(color_map_00f6b4367ed42b8d5aa1924b81c4deec.color.domain()[i]) : color_map_00f6b4367ed42b8d5aa1924b81c4deec.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_00f6b4367ed42b8d5aa1924b81c4deec.g.call(color_map_00f6b4367ed42b8d5aa1924b81c4deec.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("College Matriculation Rate (%)");
+</script>
+</html>

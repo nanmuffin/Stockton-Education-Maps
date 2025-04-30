@@ -1,0 +1,2412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f5ddf8c00c785f691100e9d5ad856cdf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+     bottom: 40px; left: 40px; width: 230px; height: 90px; 
+     background-color: white; border:2px solid grey; z-index:9999;
+     font-size:14px; padding: 10px;">
+<b>Public Schools in Stockton, CA</b><br>
+<span style="display:inline-block;width:12px;height:12px;
+background:black;border-radius:50%;margin-right:5px;"></span> Charter School<br>
+<span style="display:inline-block;width:12px;height:12px;
+background:black;transform: rotate(45deg);margin-right:5px;"></span> District School
+</div>
+    
+            <div class="folium-map" id="map_f5ddf8c00c785f691100e9d5ad856cdf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f5ddf8c00c785f691100e9d5ad856cdf = L.map(
+                "map_f5ddf8c00c785f691100e9d5ad856cdf",
+                {
+                    center: [37.958, -121.2908],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3734702d2c9e865e446789e89d3b88c8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f5ddf8c00c785f691100e9d5ad856cdf);
+        
+    
+            var feature_group_cf4aa779242edb3867dc4c676567598a = L.featureGroup(
+                {}
+            ).addTo(map_f5ddf8c00c785f691100e9d5ad856cdf);
+        
+    
+            var marker_69c626b0b60f3a1931a7e71e7cef0117 = L.marker(
+                [37.953474, -121.28245],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_e563dc79567131b2d3bee97376721df5 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff2600ff", "borderColor": "#ff2600ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_69c626b0b60f3a1931a7e71e7cef0117.setIcon(beautify_icon_e563dc79567131b2d3bee97376721df5);
+        
+    
+        var popup_8888348fa96b05c69ff52fb2e643298e = L.popup({"maxWidth": 300});
+
+        
+            var html_78162608efa3d360eb6069b148a105de = $(`<div id="html_78162608efa3d360eb6069b148a105de" style="width: 100.0%; height: 100.0%;"><b>TEAM Charter</b><br>600 East Main Street, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 14.7%</div>`)[0];
+            popup_8888348fa96b05c69ff52fb2e643298e.setContent(html_78162608efa3d360eb6069b148a105de);
+        
+
+        marker_69c626b0b60f3a1931a7e71e7cef0117.bindPopup(popup_8888348fa96b05c69ff52fb2e643298e)
+        ;
+
+        
+    
+    
+            var marker_77ca3d7efc84b19e75b692ec29f27e31 = L.marker(
+                [37.988519, -121.31603],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_cbe2fb0d850257612bfb4e27809deab7 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ffb700ff", "borderColor": "#ffb700ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_77ca3d7efc84b19e75b692ec29f27e31.setIcon(beautify_icon_cbe2fb0d850257612bfb4e27809deab7);
+        
+    
+        var popup_9f72c333d5624d6719488912a5fd7475 = L.popup({"maxWidth": 300});
+
+        
+            var html_2d59394f6620771b3972249195666dfd = $(`<div id="html_2d59394f6620771b3972249195666dfd" style="width: 100.0%; height: 100.0%;"><b>John McCandless Charter</b><br>915 Rose Marie Lane, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> Locally funded<br><b>Average ELA-Math Proficiency:</b> 42.2%</div>`)[0];
+            popup_9f72c333d5624d6719488912a5fd7475.setContent(html_2d59394f6620771b3972249195666dfd);
+        
+
+        marker_77ca3d7efc84b19e75b692ec29f27e31.bindPopup(popup_9f72c333d5624d6719488912a5fd7475)
+        ;
+
+        
+    
+    
+            var marker_5e564d60e79777a05277ff0a78587675 = L.marker(
+                [38.038336, -121.27086],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_64a0635c004ee6ad799957bdad0f854c = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ffaf00ff", "borderColor": "#ffaf00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_5e564d60e79777a05277ff0a78587675.setIcon(beautify_icon_64a0635c004ee6ad799957bdad0f854c);
+        
+    
+        var popup_02898b83c85bde67e3d5cc1296124e8d = L.popup({"maxWidth": 300});
+
+        
+            var html_27412638c070323750db7779b3c5a221 = $(`<div id="html_27412638c070323750db7779b3c5a221" style="width: 100.0%; height: 100.0%;"><b>Aspire Benjamin Holt Middle</b><br>3293 East Morada Lane, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 39.7%</div>`)[0];
+            popup_02898b83c85bde67e3d5cc1296124e8d.setContent(html_27412638c070323750db7779b3c5a221);
+        
+
+        marker_5e564d60e79777a05277ff0a78587675.bindPopup(popup_02898b83c85bde67e3d5cc1296124e8d)
+        ;
+
+        
+    
+    
+            var marker_966e102c55a697f7e925212781ea1314 = L.marker(
+                [38.039218, -121.25915],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_30428e793fb40a61a7aa9e665b84d73d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ffe100ff", "borderColor": "#ffe100ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_966e102c55a697f7e925212781ea1314.setIcon(beautify_icon_30428e793fb40a61a7aa9e665b84d73d);
+        
+    
+        var popup_612bbad71470ddebf95373d27d1d989e = L.popup({"maxWidth": 300});
+
+        
+            var html_dcb0c7d86a28810d6f7398b414bf5e43 = $(`<div id="html_dcb0c7d86a28810d6f7398b414bf5e43" style="width: 100.0%; height: 100.0%;"><b>Aspire Vincent Shalvey Academy</b><br>10038 Highway 99 East Frontage Road, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 55.4%</div>`)[0];
+            popup_612bbad71470ddebf95373d27d1d989e.setContent(html_dcb0c7d86a28810d6f7398b414bf5e43);
+        
+
+        marker_966e102c55a697f7e925212781ea1314.bindPopup(popup_612bbad71470ddebf95373d27d1d989e)
+        ;
+
+        
+    
+    
+            var marker_838ab30382ba9aa80f1e7a9465cf19f4 = L.marker(
+                [38.026921, -121.29199],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_d3a5e9d009f7584b3d894f247249bfb5 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ffd400ff", "borderColor": "#ffd400ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_838ab30382ba9aa80f1e7a9465cf19f4.setIcon(beautify_icon_d3a5e9d009f7584b3d894f247249bfb5);
+        
+    
+        var popup_7e56499435601119e649c1cdcd4bbc32 = L.popup({"maxWidth": 300});
+
+        
+            var html_5cbf7cca5d4c875dd959c02205dbeaa0 = $(`<div id="html_5cbf7cca5d4c875dd959c02205dbeaa0" style="width: 100.0%; height: 100.0%;"><b>Aspire River Oaks Charter</b><br>1801 Pyrenees Avenue, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 51.4%</div>`)[0];
+            popup_7e56499435601119e649c1cdcd4bbc32.setContent(html_5cbf7cca5d4c875dd959c02205dbeaa0);
+        
+
+        marker_838ab30382ba9aa80f1e7a9465cf19f4.bindPopup(popup_7e56499435601119e649c1cdcd4bbc32)
+        ;
+
+        
+    
+    
+            var marker_e9a61f0ad803f204aad04227923140a6 = L.marker(
+                [38.010512, -121.31675],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_857df24b8eadcd8069c9b9061519437d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff7800ff", "borderColor": "#ff7800ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_e9a61f0ad803f204aad04227923140a6.setIcon(beautify_icon_857df24b8eadcd8069c9b9061519437d);
+        
+    
+        var popup_2650d7316580b982cfc8ec70ca3a076d = L.popup({"maxWidth": 300});
+
+        
+            var html_64b6792c14fefff5bbec240696b457f5 = $(`<div id="html_64b6792c14fefff5bbec240696b457f5" style="width: 100.0%; height: 100.0%;"><b>ABLE Charter</b><br>6515 Inglewood Avenue, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 28.7%</div>`)[0];
+            popup_2650d7316580b982cfc8ec70ca3a076d.setContent(html_64b6792c14fefff5bbec240696b457f5);
+        
+
+        marker_e9a61f0ad803f204aad04227923140a6.bindPopup(popup_2650d7316580b982cfc8ec70ca3a076d)
+        ;
+
+        
+    
+    
+            var marker_7a1c7a6ef6f8b5166d6b51b8dd510f7c = L.marker(
+                [38.009697, -121.30167],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_6370643d00d9f1d05f9cf6999f40f87a = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff4000ff", "borderColor": "#ff4000ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_7a1c7a6ef6f8b5166d6b51b8dd510f7c.setIcon(beautify_icon_6370643d00d9f1d05f9cf6999f40f87a);
+        
+    
+        var popup_c4093c1691316a2c5b76a871d6219b16 = L.popup({"maxWidth": 300});
+
+        
+            var html_7d6a684083b6a1d05c4ace0ae50637aa = $(`<div id="html_7d6a684083b6a1d05c4ace0ae50637aa" style="width: 100.0%; height: 100.0%;"><b>Astronaut Jose' M. Hernandez Academy</b><br>703 East Swain Road, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 19.1%</div>`)[0];
+            popup_c4093c1691316a2c5b76a871d6219b16.setContent(html_7d6a684083b6a1d05c4ace0ae50637aa);
+        
+
+        marker_7a1c7a6ef6f8b5166d6b51b8dd510f7c.bindPopup(popup_c4093c1691316a2c5b76a871d6219b16)
+        ;
+
+        
+    
+    
+            var marker_4be7091bc40cdbb7af9fb9cdfd0391a1 = L.marker(
+                [37.939626, -121.25344],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_c0cbf522d36d8001fa4a74cbf1d9a39d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff2a00ff", "borderColor": "#ff2a00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_4be7091bc40cdbb7af9fb9cdfd0391a1.setIcon(beautify_icon_c0cbf522d36d8001fa4a74cbf1d9a39d);
+        
+    
+        var popup_c6ac84432877af30034c57ac99db7a22 = L.popup({"maxWidth": 300});
+
+        
+            var html_4d34d651ac9fad09a98cf40604f003c4 = $(`<div id="html_4d34d651ac9fad09a98cf40604f003c4" style="width: 100.0%; height: 100.0%;"><b>Aspire Rosa Parks Academy</b><br>1930 South D Street, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 15.5%</div>`)[0];
+            popup_c6ac84432877af30034c57ac99db7a22.setContent(html_4d34d651ac9fad09a98cf40604f003c4);
+        
+
+        marker_4be7091bc40cdbb7af9fb9cdfd0391a1.bindPopup(popup_c6ac84432877af30034c57ac99db7a22)
+        ;
+
+        
+    
+    
+            var marker_9276ac8f5a717076a4b83c50eaef850d = L.marker(
+                [37.961053, -121.28382],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_d73f5e19b5aa5887509610571c78973d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff7100ff", "borderColor": "#ff7100ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_9276ac8f5a717076a4b83c50eaef850d.setIcon(beautify_icon_d73f5e19b5aa5887509610571c78973d);
+        
+    
+        var popup_9f736b6c85bb2f9c2a0c69ec5cdb1e74 = L.popup({"maxWidth": 300});
+
+        
+            var html_625abe8e7b3053d33e0a20eb78c2f9a0 = $(`<div id="html_625abe8e7b3053d33e0a20eb78c2f9a0" style="width: 100.0%; height: 100.0%;"><b>Pittman Charter</b><br>701 East Park Street, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Locally funded<br><b>Average ELA-Math Proficiency:</b> 27.7%</div>`)[0];
+            popup_9f736b6c85bb2f9c2a0c69ec5cdb1e74.setContent(html_625abe8e7b3053d33e0a20eb78c2f9a0);
+        
+
+        marker_9276ac8f5a717076a4b83c50eaef850d.bindPopup(popup_9f736b6c85bb2f9c2a0c69ec5cdb1e74)
+        ;
+
+        
+    
+    
+            var marker_47a2278935b8e3ab5446937bbdaee3bc = L.marker(
+                [37.975734, -121.2803],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_4c22839f7b685080bd0721fbea6fb048 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff4200ff", "borderColor": "#ff4200ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_47a2278935b8e3ab5446937bbdaee3bc.setIcon(beautify_icon_4c22839f7b685080bd0721fbea6fb048);
+        
+    
+        var popup_a2555d311d843b6c8916c3949c9771f4 = L.popup({"maxWidth": 300});
+
+        
+            var html_e6d02a4be539f7d7102cb60b153502e7 = $(`<div id="html_e6d02a4be539f7d7102cb60b153502e7" style="width: 100.0%; height: 100.0%;"><b>Aspire Port City Academy</b><br>2040 West Lane, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 19.6%</div>`)[0];
+            popup_a2555d311d843b6c8916c3949c9771f4.setContent(html_e6d02a4be539f7d7102cb60b153502e7);
+        
+
+        marker_47a2278935b8e3ab5446937bbdaee3bc.bindPopup(popup_a2555d311d843b6c8916c3949c9771f4)
+        ;
+
+        
+    
+    
+            var marker_335f023c0d65aae8997dc8c2701bb8d8 = L.marker(
+                [37.955715, -121.26982],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_2398fb48126972433cf03e103d3f69aa = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff1900ff", "borderColor": "#ff1900ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_335f023c0d65aae8997dc8c2701bb8d8.setIcon(beautify_icon_2398fb48126972433cf03e103d3f69aa);
+        
+    
+        var popup_7eaaa4545096d81c1f819303340fab81 = L.popup({"maxWidth": 300});
+
+        
+            var html_0a511f049a202505aaa06a9ef45750d3 = $(`<div id="html_0a511f049a202505aaa06a9ef45750d3" style="width: 100.0%; height: 100.0%;"><b>Dr. Lewis Dolphin Stallworth Sr. Charter</b><br>1610 East Main Street, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 12.4%</div>`)[0];
+            popup_7eaaa4545096d81c1f819303340fab81.setContent(html_0a511f049a202505aaa06a9ef45750d3);
+        
+
+        marker_335f023c0d65aae8997dc8c2701bb8d8.bindPopup(popup_7eaaa4545096d81c1f819303340fab81)
+        ;
+
+        
+    
+    
+            var marker_be46b60ac619a8238ba2fe09c5013fd6 = L.marker(
+                [37.975822, -121.28033],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_667af6725b4ddc138132465684d2e75c = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff2600ff", "borderColor": "#ff2600ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_be46b60ac619a8238ba2fe09c5013fd6.setIcon(beautify_icon_667af6725b4ddc138132465684d2e75c);
+        
+    
+        var popup_da1b029569daf1e3fe472bccb40b5098 = L.popup({"maxWidth": 300});
+
+        
+            var html_0f6fff9f59f96b40054d1c7289c1446f = $(`<div id="html_0f6fff9f59f96b40054d1c7289c1446f" style="width: 100.0%; height: 100.0%;"><b>Aspire Langston Hughes Academy</b><br>2050 West Lane, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 14.8%</div>`)[0];
+            popup_da1b029569daf1e3fe472bccb40b5098.setContent(html_0f6fff9f59f96b40054d1c7289c1446f);
+        
+
+        marker_be46b60ac619a8238ba2fe09c5013fd6.bindPopup(popup_da1b029569daf1e3fe472bccb40b5098)
+        ;
+
+        
+    
+    
+            var marker_85a090fb61704f10487aa830f1863277 = L.marker(
+                [37.952846, -121.28498],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_19f611bbe6cf838291061199e41517d9 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff6100ff", "borderColor": "#ff6100ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_85a090fb61704f10487aa830f1863277.setIcon(beautify_icon_19f611bbe6cf838291061199e41517d9);
+        
+    
+        var popup_158d8ea24c72f92c10ee9824feb390e1 = L.popup({"maxWidth": 300});
+
+        
+            var html_bcf51dcba0c2cb94158a936e5905be5d = $(`<div id="html_bcf51dcba0c2cb94158a936e5905be5d" style="width: 100.0%; height: 100.0%;"><b>Stockton Collegiate International Elementary</b><br>400 E. Main Street Suite 131, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 24.8%</div>`)[0];
+            popup_158d8ea24c72f92c10ee9824feb390e1.setContent(html_bcf51dcba0c2cb94158a936e5905be5d);
+        
+
+        marker_85a090fb61704f10487aa830f1863277.bindPopup(popup_158d8ea24c72f92c10ee9824feb390e1)
+        ;
+
+        
+    
+    
+            var marker_5ad64606806ed5650926c83870db62cb = L.marker(
+                [37.952768471666936, -121.28502031306796],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_cc7f7877df183865ab535feb1c9b859d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff6700ff", "borderColor": "#ff6700ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_5ad64606806ed5650926c83870db62cb.setIcon(beautify_icon_cc7f7877df183865ab535feb1c9b859d);
+        
+    
+        var popup_85055094b75aad579dd7d1253adf17de = L.popup({"maxWidth": 300});
+
+        
+            var html_218b1daf96c0a6cd88e4442c1e586262 = $(`<div id="html_218b1daf96c0a6cd88e4442c1e586262" style="width: 100.0%; height: 100.0%;"><b>Stockton Collegiate International Secondary</b><br>400 E. Main Street Suite 131, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 26.0%</div>`)[0];
+            popup_85055094b75aad579dd7d1253adf17de.setContent(html_218b1daf96c0a6cd88e4442c1e586262);
+        
+
+        marker_5ad64606806ed5650926c83870db62cb.bindPopup(popup_85055094b75aad579dd7d1253adf17de)
+        ;
+
+        
+    
+    
+            var marker_9a5f9b27beb4f993b32241fbc113e68f = L.marker(
+                [37.929425, -121.26217],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_c640e4e7bee0ac9c848bed9941c4aee5 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff1c00ff", "borderColor": "#ff1c00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_9a5f9b27beb4f993b32241fbc113e68f.setIcon(beautify_icon_c640e4e7bee0ac9c848bed9941c4aee5);
+        
+    
+        var popup_7b5b10ac4d8920a96a2b3f158188292a = L.popup({"maxWidth": 300});
+
+        
+            var html_981bde40237f3db43a1549b0dac095dd = $(`<div id="html_981bde40237f3db43a1549b0dac095dd" style="width: 100.0%; height: 100.0%;"><b>Aspire APEX Academy</b><br>2410 Belleview Street, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 12.9%</div>`)[0];
+            popup_7b5b10ac4d8920a96a2b3f158188292a.setContent(html_981bde40237f3db43a1549b0dac095dd);
+        
+
+        marker_9a5f9b27beb4f993b32241fbc113e68f.bindPopup(popup_7b5b10ac4d8920a96a2b3f158188292a)
+        ;
+
+        
+    
+    
+            var marker_aff7694842971f3a9f4dac3cb1b63421 = L.marker(
+                [37.953265, -121.28345],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_8736a576d6cb9f9766203d0d3ffb9151 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff2400ff", "borderColor": "#ff2400ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_aff7694842971f3a9f4dac3cb1b63421.setIcon(beautify_icon_8736a576d6cb9f9766203d0d3ffb9151);
+        
+    
+        var popup_806fa1bf71a4ae3a2bd67ed425a2d8ab = L.popup({"maxWidth": 300});
+
+        
+            var html_0d8aede47c7d829a2289b44c288f4097 = $(`<div id="html_0d8aede47c7d829a2289b44c288f4097" style="width: 100.0%; height: 100.0%;"><b>Team Charter Academy</b><br>540 East Main Street, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 14.4%</div>`)[0];
+            popup_806fa1bf71a4ae3a2bd67ed425a2d8ab.setContent(html_0d8aede47c7d829a2289b44c288f4097);
+        
+
+        marker_aff7694842971f3a9f4dac3cb1b63421.bindPopup(popup_806fa1bf71a4ae3a2bd67ed425a2d8ab)
+        ;
+
+        
+    
+    
+            var marker_aeae6fd078bcebf57227bbca220c4bd4 = L.marker(
+                [37.9286, -121.26169],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_3509283cee53db2315ff16d38b9a9ed5 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff3e00ff", "borderColor": "#ff3e00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_aeae6fd078bcebf57227bbca220c4bd4.setIcon(beautify_icon_3509283cee53db2315ff16d38b9a9ed5);
+        
+    
+        var popup_2a2ec21581626b93d703d09348ef51d3 = L.popup({"maxWidth": 300});
+
+        
+            var html_62c19ec6174600213460b5cc2de4117e = $(`<div id="html_62c19ec6174600213460b5cc2de4117e" style="width: 100.0%; height: 100.0%;"><b>Aspire Stockton 6-12 Secondary Academy</b><br>2428 Belleview Avenue, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 18.9%</div>`)[0];
+            popup_2a2ec21581626b93d703d09348ef51d3.setContent(html_62c19ec6174600213460b5cc2de4117e);
+        
+
+        marker_aeae6fd078bcebf57227bbca220c4bd4.bindPopup(popup_2a2ec21581626b93d703d09348ef51d3)
+        ;
+
+        
+    
+    
+            var marker_69884ac1c7692c88358ec3a60d284a70 = L.marker(
+                [37.954514, -121.28682],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_13ace709e7851c0b0421079fa8aeb26e = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff2b00ff", "borderColor": "#ff2b00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_69884ac1c7692c88358ec3a60d284a70.setIcon(beautify_icon_13ace709e7851c0b0421079fa8aeb26e);
+        
+    
+        var popup_6075ce7a1e1e1995635cedd17e7e8695 = L.popup({"maxWidth": 300});
+
+        
+            var html_c5fe911529880e988064385d9945cf19 = $(`<div id="html_c5fe911529880e988064385d9945cf19" style="width: 100.0%; height: 100.0%;"><b>Voices College Bound Language Academy at Stockton</b><br>321 East Weber Avenue, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 15.6%</div>`)[0];
+            popup_6075ce7a1e1e1995635cedd17e7e8695.setContent(html_c5fe911529880e988064385d9945cf19);
+        
+
+        marker_69884ac1c7692c88358ec3a60d284a70.bindPopup(popup_6075ce7a1e1e1995635cedd17e7e8695)
+        ;
+
+        
+    
+    
+            var marker_9de0e662645152ee7f87f8b0af95104a = L.marker(
+                [38.003773, -121.28811],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_c3a648fe93258e64c1473ba8bf6d13b5 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff3b00ff", "borderColor": "#ff3b00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_9de0e662645152ee7f87f8b0af95104a.setIcon(beautify_icon_c3a648fe93258e64c1473ba8bf6d13b5);
+        
+    
+        var popup_143149212dde0412b76d66b661ab7db7 = L.popup({"maxWidth": 300});
+
+        
+            var html_7812eafebdce358178bd9d0af4223ec4 = $(`<div id="html_7812eafebdce358178bd9d0af4223ec4" style="width: 100.0%; height: 100.0%;"><b>Aspire Arts & Sciences Academy</b><br>1605 East March Ln, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 18.4%</div>`)[0];
+            popup_143149212dde0412b76d66b661ab7db7.setContent(html_7812eafebdce358178bd9d0af4223ec4);
+        
+
+        marker_9de0e662645152ee7f87f8b0af95104a.bindPopup(popup_143149212dde0412b76d66b661ab7db7)
+        ;
+
+        
+    
+    
+            var marker_7a7c2372ec7430033daed27caf4b4657 = L.marker(
+                [37.922189, -121.29719],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_c90b4d9500ebb7c35de29f22cc5858b3 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff6500ff", "borderColor": "#ff6500ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_7a7c2372ec7430033daed27caf4b4657.setIcon(beautify_icon_c90b4d9500ebb7c35de29f22cc5858b3);
+        
+    
+        var popup_33eb121decb8364eaa1b00f5ec0f8c06 = L.popup({"maxWidth": 300});
+
+        
+            var html_82b4cf4104eeeb097efacfd77ceffbbb = $(`<div id="html_82b4cf4104eeeb097efacfd77ceffbbb" style="width: 100.0%; height: 100.0%;"><b>KIPP Stockton</b><br>742 Dallas Avenue, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 25.5%</div>`)[0];
+            popup_33eb121decb8364eaa1b00f5ec0f8c06.setContent(html_82b4cf4104eeeb097efacfd77ceffbbb);
+        
+
+        marker_7a7c2372ec7430033daed27caf4b4657.bindPopup(popup_33eb121decb8364eaa1b00f5ec0f8c06)
+        ;
+
+        
+    
+    
+            var marker_51a8e8bced23c6574fabce1dc5a35529 = L.marker(
+                [37.962209, -121.28525],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_f585de32d12b4085f4558200fc196303 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff3a00ff", "borderColor": "#ff3a00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_51a8e8bced23c6574fabce1dc5a35529.setIcon(beautify_icon_f585de32d12b4085f4558200fc196303);
+        
+    
+        var popup_858189f9759bd3e642512491e795f111 = L.popup({"maxWidth": 300});
+
+        
+            var html_69a87733b43e9d20551f5359ce575811 = $(`<div id="html_69a87733b43e9d20551f5359ce575811" style="width: 100.0%; height: 100.0%;"><b>KIPP University Park</b><br>820 North American Street, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Directly funded<br><b>Average ELA-Math Proficiency:</b> 18.1%</div>`)[0];
+            popup_858189f9759bd3e642512491e795f111.setContent(html_69a87733b43e9d20551f5359ce575811);
+        
+
+        marker_51a8e8bced23c6574fabce1dc5a35529.bindPopup(popup_858189f9759bd3e642512491e795f111)
+        ;
+
+        
+    
+    
+            var marker_8a0231277878e06f80b3f0bb9c262e24 = L.marker(
+                [37.918667, -121.25484],
+                {}
+            ).addTo(feature_group_cf4aa779242edb3867dc4c676567598a);
+        
+    
+            var beautify_icon_bef8d5db68ed37d7e27144c9b3464888 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ff4e00ff", "borderColor": "#ff4e00ff", "borderWidth": 0, "icon": "graduation-cap", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "radius": 12, "spin": false, "textColor": "white"}
+            )
+            marker_8a0231277878e06f80b3f0bb9c262e24.setIcon(beautify_icon_bef8d5db68ed37d7e27144c9b3464888);
+        
+    
+        var popup_9952fe9e2d6ba56f0dd2d25b7dc22586 = L.popup({"maxWidth": 300});
+
+        
+            var html_5ebe7c466052781b5eb7377e462652d1 = $(`<div id="html_5ebe7c466052781b5eb7377e462652d1" style="width: 100.0%; height: 100.0%;"><b>Nightingale Charter</b><br>1721 Carpenter Road, Stockton<br><b>Charter:</b> Y<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> Locally funded<br><b>Average ELA-Math Proficiency:</b> 21.6%</div>`)[0];
+            popup_9952fe9e2d6ba56f0dd2d25b7dc22586.setContent(html_5ebe7c466052781b5eb7377e462652d1);
+        
+
+        marker_8a0231277878e06f80b3f0bb9c262e24.bindPopup(popup_9952fe9e2d6ba56f0dd2d25b7dc22586)
+        ;
+
+        
+    
+    
+            var feature_group_0b925dd3b157750225c9561becd84be3 = L.featureGroup(
+                {}
+            ).addTo(map_f5ddf8c00c785f691100e9d5ad856cdf);
+        
+    
+            var marker_6afade3cecf3c1b6b52c2b0028e0432e = L.marker(
+                [37.906479, -121.14738],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_963a1289c613e9145124a3f097f48a1c = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff5200ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_6afade3cecf3c1b6b52c2b0028e0432e.setIcon(div_icon_963a1289c613e9145124a3f097f48a1c);
+        
+    
+        var popup_48a968c4a7ea66f5ba084a0836655720 = L.popup({"maxWidth": 300});
+
+        
+            var html_1840f7b426c370f031b1f2302f365dd5 = $(`<div id="html_1840f7b426c370f031b1f2302f365dd5" style="width: 100.0%; height: 100.0%;"><b>Collegeville Elementary</b><br>6701 South Jack Tone Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Escalon Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 22.3%</div>`)[0];
+            popup_48a968c4a7ea66f5ba084a0836655720.setContent(html_1840f7b426c370f031b1f2302f365dd5);
+        
+
+        marker_6afade3cecf3c1b6b52c2b0028e0432e.bindPopup(popup_48a968c4a7ea66f5ba084a0836655720)
+        ;
+
+        
+    
+    
+            var marker_62d3c6a9ec6cdf44d19650377689c4d8 = L.marker(
+                [38.023034, -121.3351],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_562a7d3ebc9ab105a7bf08851a6d9fd4 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff7500ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_62d3c6a9ec6cdf44d19650377689c4d8.setIcon(div_icon_562a7d3ebc9ab105a7bf08851a6d9fd4);
+        
+    
+        var popup_ba4b750635596888d291653a8fcc7e22 = L.popup({"maxWidth": 300});
+
+        
+            var html_77e5d5a4db405a56e5b5de6c868e1c32 = $(`<div id="html_77e5d5a4db405a56e5b5de6c868e1c32" style="width: 100.0%; height: 100.0%;"><b>Colonial Heights</b><br>8135 Balboa Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 28.3%</div>`)[0];
+            popup_ba4b750635596888d291653a8fcc7e22.setContent(html_77e5d5a4db405a56e5b5de6c868e1c32);
+        
+
+        marker_62d3c6a9ec6cdf44d19650377689c4d8.bindPopup(popup_ba4b750635596888d291653a8fcc7e22)
+        ;
+
+        
+    
+    
+            var marker_bf128542b76a6571868031258f2e3b42 = L.marker(
+                [38.01865, -121.3449],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_3439be652c5ba4c4fe4394ca7e7d2b46 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff6800ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_bf128542b76a6571868031258f2e3b42.setIcon(div_icon_3439be652c5ba4c4fe4394ca7e7d2b46);
+        
+    
+        var popup_45a114c875be8b268c0d422dd5c4be40 = L.popup({"maxWidth": 300});
+
+        
+            var html_40b668c2c550dfa1df0235f089f17611 = $(`<div id="html_40b668c2c550dfa1df0235f089f17611" style="width: 100.0%; height: 100.0%;"><b>John R. Williams</b><br>2450 Meadow Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 26.0%</div>`)[0];
+            popup_45a114c875be8b268c0d422dd5c4be40.setContent(html_40b668c2c550dfa1df0235f089f17611);
+        
+
+        marker_bf128542b76a6571868031258f2e3b42.bindPopup(popup_45a114c875be8b268c0d422dd5c4be40)
+        ;
+
+        
+    
+    
+            var marker_b735762320f3d1c40e35b7eabe2f55bf = L.marker(
+                [38.012975, -121.32326],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_0de9849f478833dd5dffe1f1483c0511 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff8a00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_b735762320f3d1c40e35b7eabe2f55bf.setIcon(div_icon_0de9849f478833dd5dffe1f1483c0511);
+        
+    
+        var popup_8f9cd8c8919d11303728dcf32ff73332 = L.popup({"maxWidth": 300});
+
+        
+            var html_47767d09a304991e9bb73b8af1053d1b = $(`<div id="html_47767d09a304991e9bb73b8af1053d1b" style="width: 100.0%; height: 100.0%;"><b>Lincoln Elementary</b><br>6910 N. Gettysburg Place, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 31.9%</div>`)[0];
+            popup_8f9cd8c8919d11303728dcf32ff73332.setContent(html_47767d09a304991e9bb73b8af1053d1b);
+        
+
+        marker_b735762320f3d1c40e35b7eabe2f55bf.bindPopup(popup_8f9cd8c8919d11303728dcf32ff73332)
+        ;
+
+        
+    
+    
+            var marker_8f8c3c0290f821c2eaa08e185e304b1c = L.marker(
+                [38.007432, -121.33881],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_e72f11b2ae9e7946f4aece8fa4c4de65 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffa900ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_8f8c3c0290f821c2eaa08e185e304b1c.setIcon(div_icon_e72f11b2ae9e7946f4aece8fa4c4de65);
+        
+    
+        var popup_1f57a338e984274b42d7a0e2c4c716e0 = L.popup({"maxWidth": 300});
+
+        
+            var html_6cf0bcc1a15cb3b8fd4622dab025f9d4 = $(`<div id="html_6cf0bcc1a15cb3b8fd4622dab025f9d4" style="width: 100.0%; height: 100.0%;"><b>Sierra Middle</b><br>6768 Alexandria Place, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 37.7%</div>`)[0];
+            popup_1f57a338e984274b42d7a0e2c4c716e0.setContent(html_6cf0bcc1a15cb3b8fd4622dab025f9d4);
+        
+
+        marker_8f8c3c0290f821c2eaa08e185e304b1c.bindPopup(popup_1f57a338e984274b42d7a0e2c4c716e0)
+        ;
+
+        
+    
+    
+            var marker_d937131667119ed57d51e76a3215fa10 = L.marker(
+                [38.002733, -121.34428],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_bc32733c5fdadf52beb0598cada93962 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff5b00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_d937131667119ed57d51e76a3215fa10.setIcon(div_icon_bc32733c5fdadf52beb0598cada93962);
+        
+    
+        var popup_7055f25dec5a77f4fef5d662927a5420 = L.popup({"maxWidth": 300});
+
+        
+            var html_d682c02c31aefd7cf3da8a4b97375301 = $(`<div id="html_d682c02c31aefd7cf3da8a4b97375301" style="width: 100.0%; height: 100.0%;"><b>Tully C. Knoles</b><br>6511 Clarksburg Place, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 23.8%</div>`)[0];
+            popup_7055f25dec5a77f4fef5d662927a5420.setContent(html_d682c02c31aefd7cf3da8a4b97375301);
+        
+
+        marker_d937131667119ed57d51e76a3215fa10.bindPopup(popup_7055f25dec5a77f4fef5d662927a5420)
+        ;
+
+        
+    
+    
+            var marker_a171f6f2d6902e2a9cc7b24eb72b1e97 = L.marker(
+                [38.009032, -121.36327],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_8f843fd3bb682889306bb1c42fb9da9f = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff7b00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_a171f6f2d6902e2a9cc7b24eb72b1e97.setIcon(div_icon_8f843fd3bb682889306bb1c42fb9da9f);
+        
+    
+        var popup_2ece2d4e511134ecf5d233d8e269cb24 = L.popup({"maxWidth": 300});
+
+        
+            var html_118dff99aba64b97a66c992016f21a10 = $(`<div id="html_118dff99aba64b97a66c992016f21a10" style="width: 100.0%; height: 100.0%;"><b>Mable Barron</b><br>6835 Cumberland Place, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 29.4%</div>`)[0];
+            popup_2ece2d4e511134ecf5d233d8e269cb24.setContent(html_118dff99aba64b97a66c992016f21a10);
+        
+
+        marker_a171f6f2d6902e2a9cc7b24eb72b1e97.bindPopup(popup_2ece2d4e511134ecf5d233d8e269cb24)
+        ;
+
+        
+    
+    
+            var marker_c74d456a04886fa9eca349c559d46ea2 = L.marker(
+                [37.980199, -121.34414],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_fa2606ce3a4b5fa70849fd9a3038a23e = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff7700ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_c74d456a04886fa9eca349c559d46ea2.setIcon(div_icon_fa2606ce3a4b5fa70849fd9a3038a23e);
+        
+    
+        var popup_dfa202c30d767e1985cb12368cbaa566 = L.popup({"maxWidth": 300});
+
+        
+            var html_2158569a901284eee537cfecd37347aa = $(`<div id="html_2158569a901284eee537cfecd37347aa" style="width: 100.0%; height: 100.0%;"><b>Claudia Landeen</b><br>4128 Feather River Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 28.7%</div>`)[0];
+            popup_dfa202c30d767e1985cb12368cbaa566.setContent(html_2158569a901284eee537cfecd37347aa);
+        
+
+        marker_c74d456a04886fa9eca349c559d46ea2.bindPopup(popup_dfa202c30d767e1985cb12368cbaa566)
+        ;
+
+        
+    
+    
+            var marker_2149943ba1a655fe76905b767da62331 = L.marker(
+                [37.978189, -121.3537],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_a662dad3b64a75d5ffe6089509331e61 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff5500ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_2149943ba1a655fe76905b767da62331.setIcon(div_icon_a662dad3b64a75d5ffe6089509331e61);
+        
+    
+        var popup_2b05fff0521179373c4f4d039ace052c = L.popup({"maxWidth": 300});
+
+        
+            var html_f608616b71b873878fd028b8779af6b8 = $(`<div id="html_f608616b71b873878fd028b8779af6b8" style="width: 100.0%; height: 100.0%;"><b>Don Riggio</b><br>3110 Brookside Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 22.9%</div>`)[0];
+            popup_2b05fff0521179373c4f4d039ace052c.setContent(html_f608616b71b873878fd028b8779af6b8);
+        
+
+        marker_2149943ba1a655fe76905b767da62331.bindPopup(popup_2b05fff0521179373c4f4d039ace052c)
+        ;
+
+        
+    
+    
+            var marker_2ce1153e8a909b04767ffe8f10b5a4ae = L.marker(
+                [37.97594, -121.3501],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_96858d3ece08854e17118e5924890e6b = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffef00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_2ce1153e8a909b04767ffe8f10b5a4ae.setIcon(div_icon_96858d3ece08854e17118e5924890e6b);
+        
+    
+        var popup_db7113d8db4913100cd9f48fd008f182 = L.popup({"maxWidth": 300});
+
+        
+            var html_bc094f3fe1c17ec5366728cd375d4f79 = $(`<div id="html_bc094f3fe1c17ec5366728cd375d4f79" style="width: 100.0%; height: 100.0%;"><b>Brookside</b><br>2962 Brookside Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lincoln Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 59.9%</div>`)[0];
+            popup_db7113d8db4913100cd9f48fd008f182.setContent(html_bc094f3fe1c17ec5366728cd375d4f79);
+        
+
+        marker_2ce1153e8a909b04767ffe8f10b5a4ae.bindPopup(popup_db7113d8db4913100cd9f48fd008f182)
+        ;
+
+        
+    
+    
+            var marker_c636ed5d3adb104509b1a25af466c62c = L.marker(
+                [37.99099, -121.19599],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_410a4137db339e34263f2c727b64a74b = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff8600ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_c636ed5d3adb104509b1a25af466c62c.setIcon(div_icon_410a4137db339e34263f2c727b64a74b);
+        
+    
+        var popup_5e0396d2fb9343688aa58ae8b5925782 = L.popup({"maxWidth": 300});
+
+        
+            var html_db9c277b73426a8d84d3eb7c22305814 = $(`<div id="html_db9c277b73426a8d84d3eb7c22305814" style="width: 100.0%; height: 100.0%;"><b>Glenwood Elementary</b><br>2005 North Alpine Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Linden Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 31.3%</div>`)[0];
+            popup_5e0396d2fb9343688aa58ae8b5925782.setContent(html_db9c277b73426a8d84d3eb7c22305814);
+        
+
+        marker_c636ed5d3adb104509b1a25af466c62c.bindPopup(popup_5e0396d2fb9343688aa58ae8b5925782)
+        ;
+
+        
+    
+    
+            var marker_54981fa528a9e7613ffe1f5089ce3383 = L.marker(
+                [38.032077, -121.19419],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_bc1c61c5c2513a209f5cf3987706c512 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffa700ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_54981fa528a9e7613ffe1f5089ce3383.setIcon(div_icon_bc1c61c5c2513a209f5cf3987706c512);
+        
+    
+        var popup_e4e953adeca5a05682c426cc94514131 = L.popup({"maxWidth": 300});
+
+        
+            var html_b430097fbf6cb9f75a3816373f0536e7 = $(`<div id="html_b430097fbf6cb9f75a3816373f0536e7" style="width: 100.0%; height: 100.0%;"><b>Waterloo Elementary</b><br>7007 North Pezzi Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Linden Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 37.3%</div>`)[0];
+            popup_e4e953adeca5a05682c426cc94514131.setContent(html_b430097fbf6cb9f75a3816373f0536e7);
+        
+
+        marker_54981fa528a9e7613ffe1f5089ce3383.bindPopup(popup_e4e953adeca5a05682c426cc94514131)
+        ;
+
+        
+    
+    
+            var marker_19c4a72a14af62433f6b37a92dd346ef = L.marker(
+                [38.000162, -121.22827],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_b5d8681b87467c8d83e5c04d43eda5c7 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff5600ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_19c4a72a14af62433f6b37a92dd346ef.setIcon(div_icon_b5d8681b87467c8d83e5c04d43eda5c7);
+        
+    
+        var popup_e8b60469c34467dd2717202b421dd0c5 = L.popup({"maxWidth": 300});
+
+        
+            var html_ebece1af907365750b5702a684fd6466 = $(`<div id="html_ebece1af907365750b5702a684fd6466" style="width: 100.0%; height: 100.0%;"><b>Waverly Elementary</b><br>3507 Wilmarth Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Linden Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 22.9%</div>`)[0];
+            popup_e8b60469c34467dd2717202b421dd0c5.setContent(html_ebece1af907365750b5702a684fd6466);
+        
+
+        marker_19c4a72a14af62433f6b37a92dd346ef.bindPopup(popup_e8b60469c34467dd2717202b421dd0c5)
+        ;
+
+        
+    
+    
+            var marker_df61cb33b33a314bc643f1d533ab5d59 = L.marker(
+                [38.035165, -121.27439],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_8a1bd8c309223a528e72bd09a87c5a81 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff8600ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_df61cb33b33a314bc643f1d533ab5d59.setIcon(div_icon_8a1bd8c309223a528e72bd09a87c5a81);
+        
+    
+        var popup_6cd8c7ea8a7b2c0e22606689a99676d5 = L.popup({"maxWidth": 300});
+
+        
+            var html_265923d5e6c594aaca534973a53db6f6 = $(`<div id="html_265923d5e6c594aaca534973a53db6f6" style="width: 100.0%; height: 100.0%;"><b>Ansel Adams</b><br>9275 Glacier Point Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 31.3%</div>`)[0];
+            popup_6cd8c7ea8a7b2c0e22606689a99676d5.setContent(html_265923d5e6c594aaca534973a53db6f6);
+        
+
+        marker_df61cb33b33a314bc643f1d533ab5d59.bindPopup(popup_6cd8c7ea8a7b2c0e22606689a99676d5)
+        ;
+
+        
+    
+    
+            var marker_d557f0eb04610748b8f7320d01b17243 = L.marker(
+                [38.046565, -121.36635],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_fd78bd6fdededba418b54516cd4c470a = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff9f00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_d557f0eb04610748b8f7320d01b17243.setIcon(div_icon_fd78bd6fdededba418b54516cd4c470a);
+        
+    
+        var popup_426506a207fda59e8e3281501a78be73 = L.popup({"maxWidth": 300});
+
+        
+            var html_b4a5ae75cdb9205bb98170b67913d7f2 = $(`<div id="html_b4a5ae75cdb9205bb98170b67913d7f2" style="width: 100.0%; height: 100.0%;"><b>Christa McAuliffe Middle</b><br>3880 Iron Canyon Circle, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 35.5%</div>`)[0];
+            popup_426506a207fda59e8e3281501a78be73.setContent(html_b4a5ae75cdb9205bb98170b67913d7f2);
+        
+
+        marker_d557f0eb04610748b8f7320d01b17243.bindPopup(popup_426506a207fda59e8e3281501a78be73)
+        ;
+
+        
+    
+    
+            var marker_d86af47a6728e055fd0dac6908e62fb1 = L.marker(
+                [38.05378, -121.39286],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_e88db3a62c4904323dfa467d5a5a6ab8 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffc100ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_d86af47a6728e055fd0dac6908e62fb1.setIcon(div_icon_e88db3a62c4904323dfa467d5a5a6ab8);
+        
+    
+        var popup_e59b6e93693dceb87e517cc8f28908a9 = L.popup({"maxWidth": 300});
+
+        
+            var html_814b074a54c24c7d826dcf7c554f9ec4 = $(`<div id="html_814b074a54c24c7d826dcf7c554f9ec4" style="width: 100.0%; height: 100.0%;"><b>Manlio Silva Elementary</b><br>6250 Scott Creek Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 45.2%</div>`)[0];
+            popup_e59b6e93693dceb87e517cc8f28908a9.setContent(html_814b074a54c24c7d826dcf7c554f9ec4);
+        
+
+        marker_d86af47a6728e055fd0dac6908e62fb1.bindPopup(popup_e59b6e93693dceb87e517cc8f28908a9)
+        ;
+
+        
+    
+    
+            var marker_3cf57b602d24712609d3655ca663a2c1 = L.marker(
+                [38.0336, -121.2752],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_7bbb5092b2f548f350431998ae5495bf = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff8800ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_3cf57b602d24712609d3655ca663a2c1.setIcon(div_icon_7bbb5092b2f548f350431998ae5495bf);
+        
+    
+        var popup_033187f636e5e71ff72a90d67fb535b9 = L.popup({"maxWidth": 300});
+
+        
+            var html_fd2ab0a0748e046ac9b7e27e204419eb = $(`<div id="html_fd2ab0a0748e046ac9b7e27e204419eb" style="width: 100.0%; height: 100.0%;"><b>George Lincoln Mosher</b><br>3220 Buddy Holly Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 31.6%</div>`)[0];
+            popup_033187f636e5e71ff72a90d67fb535b9.setContent(html_fd2ab0a0748e046ac9b7e27e204419eb);
+        
+
+        marker_3cf57b602d24712609d3655ca663a2c1.bindPopup(popup_033187f636e5e71ff72a90d67fb535b9)
+        ;
+
+        
+    
+    
+            var marker_7a1d5d813d69fb560db89b1bd87c5667 = L.marker(
+                [38.047272, -121.32433],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_4362a0044f751d7f8c357a53633115f4 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffbe00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_7a1d5d813d69fb560db89b1bd87c5667.setIcon(div_icon_4362a0044f751d7f8c357a53633115f4);
+        
+    
+        var popup_7589c2ff0fccbdafe7272fbb73a094ca = L.popup({"maxWidth": 300});
+
+        
+            var html_bf6819ed13346035a8aa0f85ccb75c5f = $(`<div id="html_bf6819ed13346035a8aa0f85ccb75c5f" style="width: 100.0%; height: 100.0%;"><b>Podesta Ranch Elementary</b><br>9950 Windmill Park Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 44.6%</div>`)[0];
+            popup_7589c2ff0fccbdafe7272fbb73a094ca.setContent(html_bf6819ed13346035a8aa0f85ccb75c5f);
+        
+
+        marker_7a1d5d813d69fb560db89b1bd87c5667.bindPopup(popup_7589c2ff0fccbdafe7272fbb73a094ca)
+        ;
+
+        
+    
+    
+            var marker_f4b4812299bf2e413cd3aa343f0f677d = L.marker(
+                [38.037394, -121.24723],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_b4b43b17e7a26e71c54c085d3ecac7b1 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff3300ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_f4b4812299bf2e413cd3aa343f0f677d.setIcon(div_icon_b4b43b17e7a26e71c54c085d3ecac7b1);
+        
+    
+        var popup_84fd5b10b513ad3a3680f2a3a767d831 = L.popup({"maxWidth": 300});
+
+        
+            var html_e700c679cd24bf03de9ca3654205136a = $(`<div id="html_e700c679cd24bf03de9ca3654205136a" style="width: 100.0%; height: 100.0%;"><b>Davis Elementary</b><br>5224 East Morada Lane, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 16.9%</div>`)[0];
+            popup_84fd5b10b513ad3a3680f2a3a767d831.setContent(html_e700c679cd24bf03de9ca3654205136a);
+        
+
+        marker_f4b4812299bf2e413cd3aa343f0f677d.bindPopup(popup_84fd5b10b513ad3a3680f2a3a767d831)
+        ;
+
+        
+    
+    
+            var marker_b1be46ffcd1995201b4ada756d56b949 = L.marker(
+                [38.04784, -121.33246],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_cf13fc3c4fe42f7d05e21067fe17ef8b = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #008000ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_b1be46ffcd1995201b4ada756d56b949.setIcon(div_icon_cf13fc3c4fe42f7d05e21067fe17ef8b);
+        
+    
+        var popup_16eef9e0e323bbfcd2cf74c95f9a6a6d = L.popup({"maxWidth": 300});
+
+        
+            var html_09ad3c5350d0e9e8b11d53db2078e05c = $(`<div id="html_09ad3c5350d0e9e8b11d53db2078e05c" style="width: 100.0%; height: 100.0%;"><b>Elkhorn</b><br>10505 North Davis Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 93.6%</div>`)[0];
+            popup_16eef9e0e323bbfcd2cf74c95f9a6a6d.setContent(html_09ad3c5350d0e9e8b11d53db2078e05c);
+        
+
+        marker_b1be46ffcd1995201b4ada756d56b949.bindPopup(popup_16eef9e0e323bbfcd2cf74c95f9a6a6d)
+        ;
+
+        
+    
+    
+            var marker_9add7e061c81a05f3b27838ecdf93ec5 = L.marker(
+                [38.045695, -121.24982],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_15917687383088546ec2dd23afcf4bd1 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff7900ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_9add7e061c81a05f3b27838ecdf93ec5.setIcon(div_icon_15917687383088546ec2dd23afcf4bd1);
+        
+    
+        var popup_021fa2be90ca9716e60c3b6da1519632 = L.popup({"maxWidth": 300});
+
+        
+            var html_5477e56f19c03f7701fa5c918c9680ff = $(`<div id="html_5477e56f19c03f7701fa5c918c9680ff" style="width: 100.0%; height: 100.0%;"><b>Morada Middle</b><br>5001 Eastview Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 29.0%</div>`)[0];
+            popup_021fa2be90ca9716e60c3b6da1519632.setContent(html_5477e56f19c03f7701fa5c918c9680ff);
+        
+
+        marker_9add7e061c81a05f3b27838ecdf93ec5.bindPopup(popup_021fa2be90ca9716e60c3b6da1519632)
+        ;
+
+        
+    
+    
+            var marker_e7f4b568794426a049259b5855e46eea = L.marker(
+                [38.033907, -121.32925],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_70d46d89675b37313ba8e46e725e5f96 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff4000ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_e7f4b568794426a049259b5855e46eea.setIcon(div_icon_70d46d89675b37313ba8e46e725e5f96);
+        
+    
+        var popup_91ebffb287b3c2bd3528d279ceda5432 = L.popup({"maxWidth": 300});
+
+        
+            var html_2693eca48ca194a512bedcf35931c77c = $(`<div id="html_2693eca48ca194a512bedcf35931c77c" style="width: 100.0%; height: 100.0%;"><b>Oakwood Elementary</b><br>1315 Woodcreek Way, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 19.2%</div>`)[0];
+            popup_91ebffb287b3c2bd3528d279ceda5432.setContent(html_2693eca48ca194a512bedcf35931c77c);
+        
+
+        marker_e7f4b568794426a049259b5855e46eea.bindPopup(popup_91ebffb287b3c2bd3528d279ceda5432)
+        ;
+
+        
+    
+    
+            var marker_b2df7b9ceada19ceb320c156907d7e31 = L.marker(
+                [38.027234, -121.30052],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_2d72924ac69bce5dbb4cf375e137c6c5 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff1400ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_b2df7b9ceada19ceb320c156907d7e31.setIcon(div_icon_2d72924ac69bce5dbb4cf375e137c6c5);
+        
+    
+        var popup_73f0e3cde13940b7944d568a09cf01c4 = L.popup({"maxWidth": 300});
+
+        
+            var html_72a1d5e0d3c439bfddc53288039c0d70 = $(`<div id="html_72a1d5e0d3c439bfddc53288039c0d70" style="width: 100.0%; height: 100.0%;"><b>Parklane Elementary</b><br>8405 Tam O'Shanter Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 11.6%</div>`)[0];
+            popup_73f0e3cde13940b7944d568a09cf01c4.setContent(html_72a1d5e0d3c439bfddc53288039c0d70);
+        
+
+        marker_b2df7b9ceada19ceb320c156907d7e31.bindPopup(popup_73f0e3cde13940b7944d568a09cf01c4)
+        ;
+
+        
+    
+    
+            var marker_9092d9bc825c63e26135ab628d9deef3 = L.marker(
+                [38.041072, -121.34846],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_022eca555650809ed24baf38bc334c52 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2000ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_9092d9bc825c63e26135ab628d9deef3.setIcon(div_icon_022eca555650809ed24baf38bc334c52);
+        
+    
+        var popup_ef2e0fd5485ad4d31014ef58796ddb88 = L.popup({"maxWidth": 300});
+
+        
+            var html_6b7b51c70dbf3e3dc46c2c4f11328f23 = $(`<div id="html_6b7b51c70dbf3e3dc46c2c4f11328f23" style="width: 100.0%; height: 100.0%;"><b>Creekside Elementary</b><br>2515 Estate Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 13.7%</div>`)[0];
+            popup_ef2e0fd5485ad4d31014ef58796ddb88.setContent(html_6b7b51c70dbf3e3dc46c2c4f11328f23);
+        
+
+        marker_9092d9bc825c63e26135ab628d9deef3.bindPopup(popup_ef2e0fd5485ad4d31014ef58796ddb88)
+        ;
+
+        
+    
+    
+            var marker_1c3e7ab59fe59283cb43dbf669de2710 = L.marker(
+                [38.027215, -121.28875],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_85ee5100a889ab8e2012ac2c4446e193 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff5e00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_1c3e7ab59fe59283cb43dbf669de2710.setIcon(div_icon_85ee5100a889ab8e2012ac2c4446e193);
+        
+    
+        var popup_148ba70f437344b48ce70234e4422f2c = L.popup({"maxWidth": 300});
+
+        
+            var html_722c77122cd49f6e5b2f85d31d1490aa = $(`<div id="html_722c77122cd49f6e5b2f85d31d1490aa" style="width: 100.0%; height: 100.0%;"><b>Clairmont Elementary</b><br>8282 Lemans Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 24.3%</div>`)[0];
+            popup_148ba70f437344b48ce70234e4422f2c.setContent(html_722c77122cd49f6e5b2f85d31d1490aa);
+        
+
+        marker_1c3e7ab59fe59283cb43dbf669de2710.bindPopup(popup_148ba70f437344b48ce70234e4422f2c)
+        ;
+
+        
+    
+    
+            var marker_08c9733c83f4e883fb01af661f9b0a16 = L.marker(
+                [38.034602, -121.34366],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_2c8d478ab0ae4555e347698c2f8f5868 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2800ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_08c9733c83f4e883fb01af661f9b0a16.setIcon(div_icon_2c8d478ab0ae4555e347698c2f8f5868);
+        
+    
+        var popup_a957c6ef34d764735416e12994f45d71 = L.popup({"maxWidth": 300});
+
+        
+            var html_2e616ccd1b2485de1f9adc3240d557a4 = $(`<div id="html_2e616ccd1b2485de1f9adc3240d557a4" style="width: 100.0%; height: 100.0%;"><b>Delta Sierra Middle</b><br>2255 Wagner Heights Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 15.1%</div>`)[0];
+            popup_a957c6ef34d764735416e12994f45d71.setContent(html_2e616ccd1b2485de1f9adc3240d557a4);
+        
+
+        marker_08c9733c83f4e883fb01af661f9b0a16.bindPopup(popup_a957c6ef34d764735416e12994f45d71)
+        ;
+
+        
+    
+    
+            var marker_e9f022cad09d2b95d54ced47311a9b60 = L.marker(
+                [38.02938, -121.35344],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_5672cd271cbc903c1d608b7ec66deed2 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff5100ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_e9f022cad09d2b95d54ced47311a9b60.setIcon(div_icon_5672cd271cbc903c1d608b7ec66deed2);
+        
+    
+        var popup_b82aeb967fd359821da3abbd2cb6980b = L.popup({"maxWidth": 300});
+
+        
+            var html_fcf3bdd214bc76f080b67b93e846de14 = $(`<div id="html_fcf3bdd214bc76f080b67b93e846de14" style="width: 100.0%; height: 100.0%;"><b>Wagner-Holt Elementary</b><br>8778 Brattle Place, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 22.1%</div>`)[0];
+            popup_b82aeb967fd359821da3abbd2cb6980b.setContent(html_fcf3bdd214bc76f080b67b93e846de14);
+        
+
+        marker_e9f022cad09d2b95d54ced47311a9b60.bindPopup(popup_b82aeb967fd359821da3abbd2cb6980b)
+        ;
+
+        
+    
+    
+            var marker_a6bc89c46f5a4b2985bdcd098d3ad90e = L.marker(
+                [38.036105, -121.29021],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_5d38559b823470f7e58d7cbbf64e597a = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff7d00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_a6bc89c46f5a4b2985bdcd098d3ad90e.setIcon(div_icon_5d38559b823470f7e58d7cbbf64e597a);
+        
+    
+        var popup_27d328ffe459e2f08c350a4ec9145816 = L.popup({"maxWidth": 300});
+
+        
+            var html_73202ec52a775e4a93fcf694c5336fe0 = $(`<div id="html_73202ec52a775e4a93fcf694c5336fe0" style="width: 100.0%; height: 100.0%;"><b>Westwood Elementary</b><br>9444 Caywood Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 29.6%</div>`)[0];
+            popup_27d328ffe459e2f08c350a4ec9145816.setContent(html_73202ec52a775e4a93fcf694c5336fe0);
+        
+
+        marker_a6bc89c46f5a4b2985bdcd098d3ad90e.bindPopup(popup_27d328ffe459e2f08c350a4ec9145816)
+        ;
+
+        
+    
+    
+            var marker_1353ac272b023561bd438a0464f56538 = L.marker(
+                [38.033885, -121.30688],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_307e7081b4231abc9e1ba6efa97876ba = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff7b00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_1353ac272b023561bd438a0464f56538.setIcon(div_icon_307e7081b4231abc9e1ba6efa97876ba);
+        
+    
+        var popup_0984692185c9846854df6ae04d729dce = L.popup({"maxWidth": 300});
+
+        
+            var html_3cd376545068700b289cb0aa44f8c90f = $(`<div id="html_3cd376545068700b289cb0aa44f8c90f" style="width: 100.0%; height: 100.0%;"><b>Sutherland Elementary</b><br>550 Spring River Circle, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 29.3%</div>`)[0];
+            popup_0984692185c9846854df6ae04d729dce.setContent(html_3cd376545068700b289cb0aa44f8c90f);
+        
+
+        marker_1353ac272b023561bd438a0464f56538.bindPopup(popup_0984692185c9846854df6ae04d729dce)
+        ;
+
+        
+    
+    
+            var marker_758d22286aa8072c8d558a2053b7560d = L.marker(
+                [38.048519, -121.34537],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_74e1c23631ba590ba2faeaca13880eb3 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffde00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_758d22286aa8072c8d558a2053b7560d.setIcon(div_icon_74e1c23631ba590ba2faeaca13880eb3);
+        
+    
+        var popup_38ac582259b553469c860332e0455423 = L.popup({"maxWidth": 300});
+
+        
+            var html_18329dd9e1dfac557b05cca17c67d51c = $(`<div id="html_18329dd9e1dfac557b05cca17c67d51c" style="width: 100.0%; height: 100.0%;"><b>John Muir Elementary</b><br>2303 Whistler Way, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 54.4%</div>`)[0];
+            popup_38ac582259b553469c860332e0455423.setContent(html_18329dd9e1dfac557b05cca17c67d51c);
+        
+
+        marker_758d22286aa8072c8d558a2053b7560d.bindPopup(popup_38ac582259b553469c860332e0455423)
+        ;
+
+        
+    
+    
+            var marker_c008df2cfb8274ce18fd42ed3748a7c4 = L.marker(
+                [38.051002, -121.35878],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_a55e0efa6de9ef4b7a994ab8652b041b = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffa700ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_c008df2cfb8274ce18fd42ed3748a7c4.setIcon(div_icon_a55e0efa6de9ef4b7a994ab8652b041b);
+        
+    
+        var popup_4a4b319ab28ba32e310a1817ccdc16d8 = L.popup({"maxWidth": 300});
+
+        
+            var html_9bfb437c44558b2559de4d996ec77f3d = $(`<div id="html_9bfb437c44558b2559de4d996ec77f3d" style="width: 100.0%; height: 100.0%;"><b>Julia Morgan Elementary</b><br>3777 A. G. Spanos Boulevard, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Lodi Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 37.0%</div>`)[0];
+            popup_4a4b319ab28ba32e310a1817ccdc16d8.setContent(html_9bfb437c44558b2559de4d996ec77f3d);
+        
+
+        marker_c008df2cfb8274ce18fd42ed3748a7c4.bindPopup(popup_4a4b319ab28ba32e310a1817ccdc16d8)
+        ;
+
+        
+    
+    
+            var marker_2b13d5fe07aadc81afee03beb26556db = L.marker(
+                [37.906488, -121.30389],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_c3e7b30159ef77723d9ad1eab24d4f5f = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff3000ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_2b13d5fe07aadc81afee03beb26556db.setIcon(div_icon_c3e7b30159ef77723d9ad1eab24d4f5f);
+        
+    
+        var popup_d24d022ec9378e0322f1cbd7933a67c2 = L.popup({"maxWidth": 300});
+
+        
+            var html_b3583c82b70254444368fe07634b9165 = $(`<div id="html_b3583c82b70254444368fe07634b9165" style="width: 100.0%; height: 100.0%;"><b>August Knodt Elementary</b><br>3939 EWS Woods Boulevard, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Manteca Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 16.4%</div>`)[0];
+            popup_d24d022ec9378e0322f1cbd7933a67c2.setContent(html_b3583c82b70254444368fe07634b9165);
+        
+
+        marker_2b13d5fe07aadc81afee03beb26556db.bindPopup(popup_d24d022ec9378e0322f1cbd7933a67c2)
+        ;
+
+        
+    
+    
+            var marker_ebe5a8afb69bcf853005b65d48629315 = L.marker(
+                [37.904537, -121.29554],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_dbea3673204af4556bf2aa03cb380c87 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff6a00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_ebe5a8afb69bcf853005b65d48629315.setIcon(div_icon_dbea3673204af4556bf2aa03cb380c87);
+        
+    
+        var popup_71111754dc1d1cce1851b16d64ef99b7 = L.popup({"maxWidth": 300});
+
+        
+            var html_a519bd6902cd680ac627cd4ff1699fa5 = $(`<div id="html_a519bd6902cd680ac627cd4ff1699fa5" style="width: 100.0%; height: 100.0%;"><b>Great Valley Elementary</b><br>4223 McDougald Boulevard, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Manteca Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 26.3%</div>`)[0];
+            popup_71111754dc1d1cce1851b16d64ef99b7.setContent(html_a519bd6902cd680ac627cd4ff1699fa5);
+        
+
+        marker_ebe5a8afb69bcf853005b65d48629315.bindPopup(popup_71111754dc1d1cce1851b16d64ef99b7)
+        ;
+
+        
+    
+    
+            var marker_2bd3c7b00d83be7031be7018f044dc7e = L.marker(
+                [37.902305, -121.31872],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_f100a2e26403995e4980cb50033362ed = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff4e00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_2bd3c7b00d83be7031be7018f044dc7e.setIcon(div_icon_f100a2e26403995e4980cb50033362ed);
+        
+    
+        var popup_856f28c22022b8085a5db735236bfe1d = L.popup({"maxWidth": 300});
+
+        
+            var html_c42972f2692af75c758849168543b61d = $(`<div id="html_c42972f2692af75c758849168543b61d" style="width: 100.0%; height: 100.0%;"><b>George Y. Komure Elementary</b><br>2121 Henry Long Boulevard, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Manteca Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 21.6%</div>`)[0];
+            popup_856f28c22022b8085a5db735236bfe1d.setContent(html_c42972f2692af75c758849168543b61d);
+        
+
+        marker_2bd3c7b00d83be7031be7018f044dc7e.bindPopup(popup_856f28c22022b8085a5db735236bfe1d)
+        ;
+
+        
+    
+    
+            var marker_4203259cdb2bbda4b625d74d0174562d = L.marker(
+                [38.008545, -121.27686],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_c1cc3ae5a267c54d50b16995618d2ccf = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff9400ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_4203259cdb2bbda4b625d74d0174562d.setIcon(div_icon_c1cc3ae5a267c54d50b16995618d2ccf);
+        
+    
+        var popup_05f55ab1680c2250ed5ce06cdd93b6c8 = L.popup({"maxWidth": 300});
+
+        
+            var html_ec6ce2bc47353920b469af180f1c152d = $(`<div id="html_ec6ce2bc47353920b469af180f1c152d" style="width: 100.0%; height: 100.0%;"><b>George W. Bush Elementary</b><br>5420 Fred Russo Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 33.6%</div>`)[0];
+            popup_05f55ab1680c2250ed5ce06cdd93b6c8.setContent(html_ec6ce2bc47353920b469af180f1c152d);
+        
+
+        marker_4203259cdb2bbda4b625d74d0174562d.bindPopup(popup_05f55ab1680c2250ed5ce06cdd93b6c8)
+        ;
+
+        
+    
+    
+            var marker_dcaf5e1d77405030c15b9fedef253907 = L.marker(
+                [37.92326, -121.30255],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_762f1a5293755c1e6bcf4ecbce31a467 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff0000ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_dcaf5e1d77405030c15b9fedef253907.setIcon(div_icon_762f1a5293755c1e6bcf4ecbce31a467);
+        
+    
+        var popup_382d977d1ac0c9a8c648f6d91fc25c8b = L.popup({"maxWidth": 300});
+
+        
+            var html_248bdde30e22372fab95dddfbd135833 = $(`<div id="html_248bdde30e22372fab95dddfbd135833" style="width: 100.0%; height: 100.0%;"><b>John Marshall Elementary</b><br>1141 Lever Boulevard, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 8.1%</div>`)[0];
+            popup_382d977d1ac0c9a8c648f6d91fc25c8b.setContent(html_248bdde30e22372fab95dddfbd135833);
+        
+
+        marker_dcaf5e1d77405030c15b9fedef253907.bindPopup(popup_382d977d1ac0c9a8c648f6d91fc25c8b)
+        ;
+
+        
+    
+    
+            var marker_cb626fdd1a6b6115fd0c17bd8bccef45 = L.marker(
+                [38.01039, -121.31314],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_afa6395c19d06129275cd6ee91bdd830 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff7100ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_cb626fdd1a6b6115fd0c17bd8bccef45.setIcon(div_icon_afa6395c19d06129275cd6ee91bdd830);
+        
+    
+        var popup_05911bcf9ee157d0374961c0d05cd9b7 = L.popup({"maxWidth": 300});
+
+        
+            var html_7ac628e95ed7c924f9e53847a2e79008 = $(`<div id="html_7ac628e95ed7c924f9e53847a2e79008" style="width: 100.0%; height: 100.0%;"><b>Maxine Hong Kingston Elementary</b><br>6324 North Alturas Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 27.7%</div>`)[0];
+            popup_05911bcf9ee157d0374961c0d05cd9b7.setContent(html_7ac628e95ed7c924f9e53847a2e79008);
+        
+
+        marker_cb626fdd1a6b6115fd0c17bd8bccef45.bindPopup(popup_05911bcf9ee157d0374961c0d05cd9b7)
+        ;
+
+        
+    
+    
+            var marker_184929aac912ecc96121c6e1bc9d8af9 = L.marker(
+                [37.9547, -121.2277],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_fe7cea95dfef84bfb2b4229a39efd57f = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2800ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_184929aac912ecc96121c6e1bc9d8af9.setIcon(div_icon_fe7cea95dfef84bfb2b4229a39efd57f);
+        
+    
+        var popup_b2ae442c7c2ef5a6e2ff0719540e6bea = L.popup({"maxWidth": 300});
+
+        
+            var html_a7ae9b2a60762554cfdd4e15c462cfb8 = $(`<div id="html_a7ae9b2a60762554cfdd4e15c462cfb8" style="width: 100.0%; height: 100.0%;"><b>Wilhelmina Henry Elementary</b><br>1107 South Wagner Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 15.1%</div>`)[0];
+            popup_b2ae442c7c2ef5a6e2ff0719540e6bea.setContent(html_a7ae9b2a60762554cfdd4e15c462cfb8);
+        
+
+        marker_184929aac912ecc96121c6e1bc9d8af9.bindPopup(popup_b2ae442c7c2ef5a6e2ff0719540e6bea)
+        ;
+
+        
+    
+    
+            var marker_9494ba4e3c23ca8597b082d26f18fec6 = L.marker(
+                [37.965623, -121.26628],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_2232bd6d8bc371578d3f83f7875f45a5 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff1100ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_9494ba4e3c23ca8597b082d26f18fec6.setIcon(div_icon_2232bd6d8bc371578d3f83f7875f45a5);
+        
+    
+        var popup_638585e257219b412a216d0b8572f1df = L.popup({"maxWidth": 300});
+
+        
+            var html_1d11e0745df526c00ffa9e1eaec5eb51 = $(`<div id="html_1d11e0745df526c00ffa9e1eaec5eb51" style="width: 100.0%; height: 100.0%;"><b>John C. Fremont Elementary</b><br>2021 East Flora Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 11.0%</div>`)[0];
+            popup_638585e257219b412a216d0b8572f1df.setContent(html_1d11e0745df526c00ffa9e1eaec5eb51);
+        
+
+        marker_9494ba4e3c23ca8597b082d26f18fec6.bindPopup(popup_638585e257219b412a216d0b8572f1df)
+        ;
+
+        
+    
+    
+            var marker_8f1db8375517f8c9267a8f3440883644 = L.marker(
+                [37.931393, -121.24932],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_31a89a7b7a9e14c834bfa17f305ea64a = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff1f00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_8f1db8375517f8c9267a8f3440883644.setIcon(div_icon_31a89a7b7a9e14c834bfa17f305ea64a);
+        
+    
+        var popup_118c0737feb70741283f7d512abc5a10 = L.popup({"maxWidth": 300});
+
+        
+            var html_556c37ed63fcd8e1227289e8e5b0894d = $(`<div id="html_556c37ed63fcd8e1227289e8e5b0894d" style="width: 100.0%; height: 100.0%;"><b>Alexander Hamilton Elementary</b><br>2245 East 11th Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 13.6%</div>`)[0];
+            popup_118c0737feb70741283f7d512abc5a10.setContent(html_556c37ed63fcd8e1227289e8e5b0894d);
+        
+
+        marker_8f1db8375517f8c9267a8f3440883644.bindPopup(popup_118c0737feb70741283f7d512abc5a10)
+        ;
+
+        
+    
+    
+            var marker_b6082b0687269dfccc172de66e5e7419 = L.marker(
+                [38.00059, -121.27479],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_2d9b25e34c96ca2aec239f163a9d50ed = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffcc00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_b6082b0687269dfccc172de66e5e7419.setIcon(div_icon_2d9b25e34c96ca2aec239f163a9d50ed);
+        
+    
+        var popup_cdb794bf1872f98965c44f67990a78f9 = L.popup({"maxWidth": 300});
+
+        
+            var html_7ea77438597d17f9d135371b97298299 = $(`<div id="html_7ea77438597d17f9d135371b97298299" style="width: 100.0%; height: 100.0%;"><b>Valentine Peyton Elementary</b><br>2525 Gold Brook Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 48.9%</div>`)[0];
+            popup_cdb794bf1872f98965c44f67990a78f9.setContent(html_7ea77438597d17f9d135371b97298299);
+        
+
+        marker_b6082b0687269dfccc172de66e5e7419.bindPopup(popup_cdb794bf1872f98965c44f67990a78f9)
+        ;
+
+        
+    
+    
+            var marker_30a83923df906f03cb1adc3307a33fb2 = L.marker(
+                [37.94803, -121.28304],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_4fcfd9c0df337e8b1f4537b80098bc3f = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff5000ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_30a83923df906f03cb1adc3307a33fb2.setIcon(div_icon_4fcfd9c0df337e8b1f4537b80098bc3f);
+        
+    
+        var popup_f133e2fc7fa85603c806a561a8fd4604 = L.popup({"maxWidth": 300});
+
+        
+            var html_1962993cc51b4aacefe2c689aca23a68 = $(`<div id="html_1962993cc51b4aacefe2c689aca23a68" style="width: 100.0%; height: 100.0%;"><b>Spanos (Alex G.) Elementary</b><br>536 South California Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 22.0%</div>`)[0];
+            popup_f133e2fc7fa85603c806a561a8fd4604.setContent(html_1962993cc51b4aacefe2c689aca23a68);
+        
+
+        marker_30a83923df906f03cb1adc3307a33fb2.bindPopup(popup_f133e2fc7fa85603c806a561a8fd4604)
+        ;
+
+        
+    
+    
+            var marker_5d4e1f1913901932fdebb1245a1127e3 = L.marker(
+                [37.977456, -121.33687],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_9307837d96cff21fca6c894bd898a191 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffaf00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_5d4e1f1913901932fdebb1245a1127e3.setIcon(div_icon_9307837d96cff21fca6c894bd898a191);
+        
+    
+        var popup_7aa33fcc9c5f1d6313aa0012e8906f9d = L.popup({"maxWidth": 300});
+
+        
+            var html_7ebda6fdb333d9acab3b0f803433887c = $(`<div id="html_7ebda6fdb333d9acab3b0f803433887c" style="width: 100.0%; height: 100.0%;"><b>Primary Years Academy</b><br>3830 Webster Ave, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 39.8%</div>`)[0];
+            popup_7aa33fcc9c5f1d6313aa0012e8906f9d.setContent(html_7ebda6fdb333d9acab3b0f803433887c);
+        
+
+        marker_5d4e1f1913901932fdebb1245a1127e3.bindPopup(popup_7aa33fcc9c5f1d6313aa0012e8906f9d)
+        ;
+
+        
+    
+    
+            var marker_5a088660dc15dfc1b93a2bc409bf9ab6 = L.marker(
+                [37.997531, -121.33688],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_33fe65fc30233b39c863536504e3eaa3 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff6100ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_5a088660dc15dfc1b93a2bc409bf9ab6.setIcon(div_icon_33fe65fc30233b39c863536504e3eaa3);
+        
+    
+        var popup_0f13f87113324156497005ebe6c78e2e = L.popup({"maxWidth": 300});
+
+        
+            var html_d9d125079426e1c68d8f67160c53a134 = $(`<div id="html_d9d125079426e1c68d8f67160c53a134" style="width: 100.0%; height: 100.0%;"><b>Flora Arca Mata</b><br>5600 Alexandria Place, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 24.9%</div>`)[0];
+            popup_0f13f87113324156497005ebe6c78e2e.setContent(html_d9d125079426e1c68d8f67160c53a134);
+        
+
+        marker_5a088660dc15dfc1b93a2bc409bf9ab6.bindPopup(popup_0f13f87113324156497005ebe6c78e2e)
+        ;
+
+        
+    
+    
+            var marker_6f905ab34feb094ff68f9c19d6c65779 = L.marker(
+                [37.972844, -121.2367],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_bce750af3574c9059ef99a03c06dbb18 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff6200ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_6f905ab34feb094ff68f9c19d6c65779.setIcon(div_icon_bce750af3574c9059ef99a03c06dbb18);
+        
+    
+        var popup_183dcf4c9443036bca4aa0c45b67265f = L.popup({"maxWidth": 300});
+
+        
+            var html_f31e2a47ea7f6baecf6aac0d2c8ce01f = $(`<div id="html_f31e2a47ea7f6baecf6aac0d2c8ce01f" style="width: 100.0%; height: 100.0%;"><b>Franklin High</b><br>4600 East Fremont Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 25.1%</div>`)[0];
+            popup_183dcf4c9443036bca4aa0c45b67265f.setContent(html_f31e2a47ea7f6baecf6aac0d2c8ce01f);
+        
+
+        marker_6f905ab34feb094ff68f9c19d6c65779.bindPopup(popup_183dcf4c9443036bca4aa0c45b67265f)
+        ;
+
+        
+    
+    
+            var marker_8fdd4b1e562ccabcc02438a71a9ff101 = L.marker(
+                [38.00908, -121.31598],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_4fc6d743c8ad10968e5995b89af4ebfe = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff1100ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_8fdd4b1e562ccabcc02438a71a9ff101.setIcon(div_icon_4fc6d743c8ad10968e5995b89af4ebfe);
+        
+    
+        var popup_a27ffaa2cf23d14a8964b92d87a7450c = L.popup({"maxWidth": 300});
+
+        
+            var html_931257085c217446de60a6040d702edc = $(`<div id="html_931257085c217446de60a6040d702edc" style="width: 100.0%; height: 100.0%;"><b>Adams Elementary</b><br>6402 Inglewood Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 11.2%</div>`)[0];
+            popup_a27ffaa2cf23d14a8964b92d87a7450c.setContent(html_931257085c217446de60a6040d702edc);
+        
+
+        marker_8fdd4b1e562ccabcc02438a71a9ff101.bindPopup(popup_a27ffaa2cf23d14a8964b92d87a7450c)
+        ;
+
+        
+    
+    
+            var marker_134336dcfa9d52815a951a22eb13f8c3 = L.marker(
+                [37.982081, -121.25631],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_ed67a5e3e84d80dd118c44a8a603319c = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff5d00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_134336dcfa9d52815a951a22eb13f8c3.setIcon(div_icon_ed67a5e3e84d80dd118c44a8a603319c);
+        
+    
+        var popup_51b2aa4f1b43e3f420c29b74e893223b = L.popup({"maxWidth": 300});
+
+        
+            var html_2fc028e09850f1fb80a43cddacb6e0ad = $(`<div id="html_2fc028e09850f1fb80a43cddacb6e0ad" style="width: 100.0%; height: 100.0%;"><b>August Elementary</b><br>2101 Sutro Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 24.2%</div>`)[0];
+            popup_51b2aa4f1b43e3f420c29b74e893223b.setContent(html_2fc028e09850f1fb80a43cddacb6e0ad);
+        
+
+        marker_134336dcfa9d52815a951a22eb13f8c3.bindPopup(popup_51b2aa4f1b43e3f420c29b74e893223b)
+        ;
+
+        
+    
+    
+            var marker_f44d46f4113d96516a6e54f7093e1ee2 = L.marker(
+                [37.982641, -121.30221],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_107d9d6e9077d758736c749d8d80ae99 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff6d00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_f44d46f4113d96516a6e54f7093e1ee2.setIcon(div_icon_107d9d6e9077d758736c749d8d80ae99);
+        
+    
+        var popup_fd1ca87cdcdaf6f57164488ee6b29e62 = L.popup({"maxWidth": 300});
+
+        
+            var html_990d65d4a1a8f18458f3481d130957f1 = $(`<div id="html_990d65d4a1a8f18458f3481d130957f1" style="width: 100.0%; height: 100.0%;"><b>Cleveland Elementary</b><br>20 East Fulton Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 27.0%</div>`)[0];
+            popup_fd1ca87cdcdaf6f57164488ee6b29e62.setContent(html_990d65d4a1a8f18458f3481d130957f1);
+        
+
+        marker_f44d46f4113d96516a6e54f7093e1ee2.bindPopup(popup_fd1ca87cdcdaf6f57164488ee6b29e62)
+        ;
+
+        
+    
+    
+            var marker_4b00589b29d4adf65e41bb9cdfb39180 = L.marker(
+                [37.966514, -121.30163],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_794bc490522a84748622915b071051a7 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2600ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_4b00589b29d4adf65e41bb9cdfb39180.setIcon(div_icon_794bc490522a84748622915b071051a7);
+        
+    
+        var popup_11ff14cb3acf68900c0d5a955d02811f = L.popup({"maxWidth": 300});
+
+        
+            var html_73f4b6f6a66e848733df1a47384fc4dd = $(`<div id="html_73f4b6f6a66e848733df1a47384fc4dd" style="width: 100.0%; height: 100.0%;"><b>El Dorado Elementary</b><br>1540 North Lincoln Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 14.6%</div>`)[0];
+            popup_11ff14cb3acf68900c0d5a955d02811f.setContent(html_73f4b6f6a66e848733df1a47384fc4dd);
+        
+
+        marker_4b00589b29d4adf65e41bb9cdfb39180.bindPopup(popup_11ff14cb3acf68900c0d5a955d02811f)
+        ;
+
+        
+    
+    
+            var marker_88b63779c8a32a402e9e91ef4d4c86fa = L.marker(
+                [37.959487, -121.21973],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_97d4090c35728a8cc83d8871f148ccef = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff4900ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_88b63779c8a32a402e9e91ef4d4c86fa.setIcon(div_icon_97d4090c35728a8cc83d8871f148ccef);
+        
+    
+        var popup_1587ae949f5a112ac04e60dd6d09c6eb = L.popup({"maxWidth": 300});
+
+        
+            var html_f565215537ad282cd2884b4d439eddfc = $(`<div id="html_f565215537ad282cd2884b4d439eddfc" style="width: 100.0%; height: 100.0%;"><b>Elmwood Elementary</b><br>840 South Cardinal Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 20.7%</div>`)[0];
+            popup_1587ae949f5a112ac04e60dd6d09c6eb.setContent(html_f565215537ad282cd2884b4d439eddfc);
+        
+
+        marker_88b63779c8a32a402e9e91ef4d4c86fa.bindPopup(popup_1587ae949f5a112ac04e60dd6d09c6eb)
+        ;
+
+        
+    
+    
+            var marker_0580b0492c66511e777dde4c571d47ee = L.marker(
+                [37.958893, -121.25092],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_26219ed81eebc675b43b759de52f7187 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff6600ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_0580b0492c66511e777dde4c571d47ee.setIcon(div_icon_26219ed81eebc675b43b759de52f7187);
+        
+    
+        var popup_119e7adfd85c04ac8372e0a17845b284 = L.popup({"maxWidth": 300});
+
+        
+            var html_ea0f8822217002a3dbfde30dc894e124 = $(`<div id="html_ea0f8822217002a3dbfde30dc894e124" style="width: 100.0%; height: 100.0%;"><b>King Elementary</b><br>2640 East Lafayette Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 25.7%</div>`)[0];
+            popup_119e7adfd85c04ac8372e0a17845b284.setContent(html_ea0f8822217002a3dbfde30dc894e124);
+        
+
+        marker_0580b0492c66511e777dde4c571d47ee.bindPopup(popup_119e7adfd85c04ac8372e0a17845b284)
+        ;
+
+        
+    
+    
+            var marker_51191554cdeb142b522d4f134f49f829 = L.marker(
+                [37.969578, -121.25513],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_462e7e7a5d8e15d990e4a2a21376f567 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff4600ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_51191554cdeb142b522d4f134f49f829.setIcon(div_icon_462e7e7a5d8e15d990e4a2a21376f567);
+        
+    
+        var popup_94c588d7ec3baa9c2708daf35fe5fdc6 = L.popup({"maxWidth": 300});
+
+        
+            var html_5b414629d71daef89fdf8e90463e6bc5 = $(`<div id="html_5b414629d71daef89fdf8e90463e6bc5" style="width: 100.0%; height: 100.0%;"><b>Fillmore Elementary</b><br>2644 East Poplar Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 20.1%</div>`)[0];
+            popup_94c588d7ec3baa9c2708daf35fe5fdc6.setContent(html_5b414629d71daef89fdf8e90463e6bc5);
+        
+
+        marker_51191554cdeb142b522d4f134f49f829.bindPopup(popup_94c588d7ec3baa9c2708daf35fe5fdc6)
+        ;
+
+        
+    
+    
+            var marker_b307d1992ee50259c62a137e3925a5c6 = L.marker(
+                [37.9719, -121.274],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_2b37574eb7d71c76c91952d84543522e = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff4d00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_b307d1992ee50259c62a137e3925a5c6.setIcon(div_icon_2b37574eb7d71c76c91952d84543522e);
+        
+    
+        var popup_652535f10bc63965db17e995d2e649e4 = L.popup({"maxWidth": 300});
+
+        
+            var html_400c1067ff82ccb0cdf4e92c3b7e88a2 = $(`<div id="html_400c1067ff82ccb0cdf4e92c3b7e88a2" style="width: 100.0%; height: 100.0%;"><b>Grunsky Elementary</b><br>1550 North School Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 21.5%</div>`)[0];
+            popup_652535f10bc63965db17e995d2e649e4.setContent(html_400c1067ff82ccb0cdf4e92c3b7e88a2);
+        
+
+        marker_b307d1992ee50259c62a137e3925a5c6.bindPopup(popup_652535f10bc63965db17e995d2e649e4)
+        ;
+
+        
+    
+    
+            var marker_da138ad9a50e586a72e375d790ab930e = L.marker(
+                [37.986165, -121.27246],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_7e7889e2a987d9d9b6079f8dccfd9199 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff5900ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_da138ad9a50e586a72e375d790ab930e.setIcon(div_icon_7e7889e2a987d9d9b6079f8dccfd9199);
+        
+    
+        var popup_74bb956813d5fc4d309c330b46ce40b2 = L.popup({"maxWidth": 300});
+
+        
+            var html_4c944fb4bc89c1a746e17e4f40a0af43 = $(`<div id="html_4c944fb4bc89c1a746e17e4f40a0af43" style="width: 100.0%; height: 100.0%;"><b>Harrison Elementary</b><br>3203 Sanguinetti Lane, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 23.5%</div>`)[0];
+            popup_74bb956813d5fc4d309c330b46ce40b2.setContent(html_4c944fb4bc89c1a746e17e4f40a0af43);
+        
+
+        marker_da138ad9a50e586a72e375d790ab930e.bindPopup(popup_74bb956813d5fc4d309c330b46ce40b2)
+        ;
+
+        
+    
+    
+            var marker_d79f79a3c17f016aeefa4d278091efcd = L.marker(
+                [37.940483, -121.29507],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_35ce1cdf973bf96cc008448de258af0a = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2a00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_d79f79a3c17f016aeefa4d278091efcd.setIcon(div_icon_35ce1cdf973bf96cc008448de258af0a);
+        
+    
+        var popup_48f77641ac44dbce75d4c8c80fb4b49d = L.popup({"maxWidth": 300});
+
+        
+            var html_913e24f707bbd7471dae80669f4de884 = $(`<div id="html_913e24f707bbd7471dae80669f4de884" style="width: 100.0%; height: 100.0%;"><b>Hazelton Elementary</b><br>535 West Jefferson, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 15.3%</div>`)[0];
+            popup_48f77641ac44dbce75d4c8c80fb4b49d.setContent(html_913e24f707bbd7471dae80669f4de884);
+        
+
+        marker_d79f79a3c17f016aeefa4d278091efcd.bindPopup(popup_48f77641ac44dbce75d4c8c80fb4b49d)
+        ;
+
+        
+    
+    
+            var marker_6c62631ccd1aa1e40762970e2e94f844 = L.marker(
+                [37.966634, -121.34278],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_79814206a1fc25dd401c7edb6f75de5e = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff3e00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_6c62631ccd1aa1e40762970e2e94f844.setIcon(div_icon_79814206a1fc25dd401c7edb6f75de5e);
+        
+    
+        var popup_2f47bbb6990a19c659a18c5378cfe87d = L.popup({"maxWidth": 300});
+
+        
+            var html_98331d6e419bdc2caf44ccf6766dbfde = $(`<div id="html_98331d6e419bdc2caf44ccf6766dbfde" style="width: 100.0%; height: 100.0%;"><b>Hoover Elementary</b><br>2900 Kirk Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 18.9%</div>`)[0];
+            popup_2f47bbb6990a19c659a18c5378cfe87d.setContent(html_98331d6e419bdc2caf44ccf6766dbfde);
+        
+
+        marker_6c62631ccd1aa1e40762970e2e94f844.bindPopup(popup_2f47bbb6990a19c659a18c5378cfe87d)
+        ;
+
+        
+    
+    
+            var marker_0af7e2f4f4c5d2e9f35dbc5303a40f96 = L.marker(
+                [38.030086, -121.31853],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_83da43b1a7e47a7feaa80b9d7286d9f9 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff3b00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_0af7e2f4f4c5d2e9f35dbc5303a40f96.setIcon(div_icon_83da43b1a7e47a7feaa80b9d7286d9f9);
+        
+    
+        var popup_d1af7275fe9c2499030b8b26542fb45d = L.popup({"maxWidth": 300});
+
+        
+            var html_6c17c36bf018c8472c479fb6ce37a847 = $(`<div id="html_6c17c36bf018c8472c479fb6ce37a847" style="width: 100.0%; height: 100.0%;"><b>Kennedy Elementary</b><br>630 West Ponce de Leon Drive, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 18.3%</div>`)[0];
+            popup_d1af7275fe9c2499030b8b26542fb45d.setContent(html_6c17c36bf018c8472c479fb6ce37a847);
+        
+
+        marker_0af7e2f4f4c5d2e9f35dbc5303a40f96.bindPopup(popup_d1af7275fe9c2499030b8b26542fb45d)
+        ;
+
+        
+    
+    
+            var marker_1c234940486437a06c53fd7f27207c04 = L.marker(
+                [37.971246, -121.32481],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_cb884fc5313361448c8bc3b4170b55ce = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2400ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_1c234940486437a06c53fd7f27207c04.setIcon(div_icon_cb884fc5313361448c8bc3b4170b55ce);
+        
+    
+        var popup_edd42f687d122b7836d4a2c9b7b6d197 = L.popup({"maxWidth": 300});
+
+        
+            var html_fb994021c6b3395ec5ded6d0a34cdb47 = $(`<div id="html_fb994021c6b3395ec5ded6d0a34cdb47" style="width: 100.0%; height: 100.0%;"><b>Madison Elementary</b><br>2939 Mission Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 14.4%</div>`)[0];
+            popup_edd42f687d122b7836d4a2c9b7b6d197.setContent(html_fb994021c6b3395ec5ded6d0a34cdb47);
+        
+
+        marker_1c234940486437a06c53fd7f27207c04.bindPopup(popup_edd42f687d122b7836d4a2c9b7b6d197)
+        ;
+
+        
+    
+    
+            var marker_8757d2c548a835b8c6a09e9ffe06fe29 = L.marker(
+                [37.926792, -121.28294],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_5d5ced053bd4d839d55e311c70a26e04 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff3400ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_8757d2c548a835b8c6a09e9ffe06fe29.setIcon(div_icon_5d5ced053bd4d839d55e311c70a26e04);
+        
+    
+        var popup_01e6d7f45377589d2e81689c3850a017 = L.popup({"maxWidth": 300});
+
+        
+            var html_bb058439b50aa9f1650f9d65b4be0959 = $(`<div id="html_bb058439b50aa9f1650f9d65b4be0959" style="width: 100.0%; height: 100.0%;"><b>McKinley Elementary</b><br>30 West Ninth Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 17.1%</div>`)[0];
+            popup_01e6d7f45377589d2e81689c3850a017.setContent(html_bb058439b50aa9f1650f9d65b4be0959);
+        
+
+        marker_8757d2c548a835b8c6a09e9ffe06fe29.bindPopup(popup_01e6d7f45377589d2e81689c3850a017)
+        ;
+
+        
+    
+    
+            var marker_ea0bdd912fc9c3174bd0c13c663671a8 = L.marker(
+                [37.93127, -121.24832],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_b464edeb9ca01fd7c9fd180829ae00f6 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2c00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_ea0bdd912fc9c3174bd0c13c663671a8.setIcon(div_icon_b464edeb9ca01fd7c9fd180829ae00f6);
+        
+    
+        var popup_e897911b15c092b58d909987bd556589 = L.popup({"maxWidth": 300});
+
+        
+            var html_01c930a11f47df2c8394faba881266c2 = $(`<div id="html_01c930a11f47df2c8394faba881266c2" style="width: 100.0%; height: 100.0%;"><b>Monroe Elementary</b><br>2236 East 11th Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 15.8%</div>`)[0];
+            popup_e897911b15c092b58d909987bd556589.setContent(html_01c930a11f47df2c8394faba881266c2);
+        
+
+        marker_ea0bdd912fc9c3174bd0c13c663671a8.bindPopup(popup_e897911b15c092b58d909987bd556589)
+        ;
+
+        
+    
+    
+            var marker_d7050781543429b094ed5c950d61b0ad = L.marker(
+                [37.938777, -121.24102],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_bc0ef70e8387f10b87709c1fb497db22 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff5000ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_d7050781543429b094ed5c950d61b0ad.setIcon(div_icon_bc0ef70e8387f10b87709c1fb497db22);
+        
+    
+        var popup_bac64615b0ea613f241a19655a28c6e3 = L.popup({"maxWidth": 300});
+
+        
+            var html_d052fe0c7e84993e2998268344e023a5 = $(`<div id="html_d052fe0c7e84993e2998268344e023a5" style="width: 100.0%; height: 100.0%;"><b>Montezuma Elementary</b><br>2843 Farmington Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 22.0%</div>`)[0];
+            popup_bac64615b0ea613f241a19655a28c6e3.setContent(html_d052fe0c7e84993e2998268344e023a5);
+        
+
+        marker_d7050781543429b094ed5c950d61b0ad.bindPopup(popup_bac64615b0ea613f241a19655a28c6e3)
+        ;
+
+        
+    
+    
+            var marker_5269ba1ff5b344a18a4423bc840bed83 = L.marker(
+                [38.019613, -121.31051],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_d4decab70de723d00fbf72ba6190f6dc = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2900ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_5269ba1ff5b344a18a4423bc840bed83.setIcon(div_icon_d4decab70de723d00fbf72ba6190f6dc);
+        
+    
+        var popup_4fddcd7e7614e473c7da4215ebaa7f87 = L.popup({"maxWidth": 300});
+
+        
+            var html_5ff75bdf0341c3e29181a0d4a6677dca = $(`<div id="html_5ff75bdf0341c3e29181a0d4a6677dca" style="width: 100.0%; height: 100.0%;"><b>Pulliam Elementary</b><br>230 Presidio Way, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 15.2%</div>`)[0];
+            popup_4fddcd7e7614e473c7da4215ebaa7f87.setContent(html_5ff75bdf0341c3e29181a0d4a6677dca);
+        
+
+        marker_5269ba1ff5b344a18a4423bc840bed83.bindPopup(popup_4fddcd7e7614e473c7da4215ebaa7f87)
+        ;
+
+        
+    
+    
+            var marker_cc5390d738e88c4f010a05adf1bc8493 = L.marker(
+                [37.954804, -121.24123],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_04e2fa2cd8c7e22e2cb4801f764713fb = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff1f00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_cc5390d738e88c4f010a05adf1bc8493.setIcon(div_icon_04e2fa2cd8c7e22e2cb4801f764713fb);
+        
+    
+        var popup_d42d170599207c67db34d9d151b8d4ed = L.popup({"maxWidth": 300});
+
+        
+            var html_03b5cf714fc5b1f0df89315f1413a843 = $(`<div id="html_03b5cf714fc5b1f0df89315f1413a843" style="width: 100.0%; height: 100.0%;"><b>Roosevelt Elementary</b><br>776 South Broadway Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 13.4%</div>`)[0];
+            popup_d42d170599207c67db34d9d151b8d4ed.setContent(html_03b5cf714fc5b1f0df89315f1413a843);
+        
+
+        marker_cc5390d738e88c4f010a05adf1bc8493.bindPopup(popup_d42d170599207c67db34d9d151b8d4ed)
+        ;
+
+        
+    
+    
+            var marker_60c0247aab8e1268f58b5d9083ce8bf9 = L.marker(
+                [37.913751, -121.28495],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_56cd6842ac8ca0a720f03c84ed814aec = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff4f00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_60c0247aab8e1268f58b5d9083ce8bf9.setIcon(div_icon_56cd6842ac8ca0a720f03c84ed814aec);
+        
+    
+        var popup_181aef1ed400f85d81765e542228b818 = L.popup({"maxWidth": 300});
+
+        
+            var html_ca92fc4ff986d52b7654106fcfff5d85 = $(`<div id="html_ca92fc4ff986d52b7654106fcfff5d85" style="width: 100.0%; height: 100.0%;"><b>Taft Elementary</b><br>419 Downing Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 21.7%</div>`)[0];
+            popup_181aef1ed400f85d81765e542228b818.setContent(html_ca92fc4ff986d52b7654106fcfff5d85);
+        
+
+        marker_60c0247aab8e1268f58b5d9083ce8bf9.bindPopup(popup_181aef1ed400f85d81765e542228b818)
+        ;
+
+        
+    
+    
+            var marker_af8db92764465f2054a265b79e7f20cd = L.marker(
+                [37.923256, -121.30194],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_62f63fd111f304f906fd60b695c7cf21 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff1e00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_af8db92764465f2054a265b79e7f20cd.setIcon(div_icon_62f63fd111f304f906fd60b695c7cf21);
+        
+    
+        var popup_dc891b660e81e26e314d605ca9c77e9c = L.popup({"maxWidth": 300});
+
+        
+            var html_5dc8f5517fa10428be6408439bca19d2 = $(`<div id="html_5dc8f5517fa10428be6408439bca19d2" style="width: 100.0%; height: 100.0%;"><b>Taylor Leadership Academy</b><br>1101 Lever Boulevard, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 13.2%</div>`)[0];
+            popup_dc891b660e81e26e314d605ca9c77e9c.setContent(html_5dc8f5517fa10428be6408439bca19d2);
+        
+
+        marker_af8db92764465f2054a265b79e7f20cd.bindPopup(popup_dc891b660e81e26e314d605ca9c77e9c)
+        ;
+
+        
+    
+    
+            var marker_b3ec6ab45ba4f02ef7d02db11da656e2 = L.marker(
+                [37.930684, -121.25896],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_7144b59f0d0a0c5f0d58e7b5c8b3e778 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2500ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_b3ec6ab45ba4f02ef7d02db11da656e2.setIcon(div_icon_7144b59f0d0a0c5f0d58e7b5c8b3e778);
+        
+    
+        var popup_4f2fad925dfce03c3ebad4dbef4549bc = L.popup({"maxWidth": 300});
+
+        
+            var html_7790138d619910d6f94ccdd752fabc71 = $(`<div id="html_7790138d619910d6f94ccdd752fabc71" style="width: 100.0%; height: 100.0%;"><b>Van Buren Elementary</b><br>1628 East Tenth Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 14.5%</div>`)[0];
+            popup_4f2fad925dfce03c3ebad4dbef4549bc.setContent(html_7790138d619910d6f94ccdd752fabc71);
+        
+
+        marker_b3ec6ab45ba4f02ef7d02db11da656e2.bindPopup(popup_4f2fad925dfce03c3ebad4dbef4549bc)
+        ;
+
+        
+    
+    
+            var marker_d0ab5690d72abb1805f43727ce664470 = L.marker(
+                [37.959904, -121.31992],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_c953820e19f1e0666c239cf63dae926b = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff4700ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_d0ab5690d72abb1805f43727ce664470.setIcon(div_icon_c953820e19f1e0666c239cf63dae926b);
+        
+    
+        var popup_edc0575c8163fa7c71c06f70d601a68e = L.popup({"maxWidth": 300});
+
+        
+            var html_46efa540b38af9550b67aa34616af3da = $(`<div id="html_46efa540b38af9550b67aa34616af3da" style="width: 100.0%; height: 100.0%;"><b>Victory Elementary</b><br>1838 West Rose Street, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 20.4%</div>`)[0];
+            popup_edc0575c8163fa7c71c06f70d601a68e.setContent(html_46efa540b38af9550b67aa34616af3da);
+        
+
+        marker_d0ab5690d72abb1805f43727ce664470.bindPopup(popup_edc0575c8163fa7c71c06f70d601a68e)
+        ;
+
+        
+    
+    
+            var marker_9eb2232fdfa6bc48481ad632051cfadb = L.marker(
+                [37.978862, -121.29799],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_0db3950374a4739d034c2d5593a7780d = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff2100ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_9eb2232fdfa6bc48481ad632051cfadb.setIcon(div_icon_0db3950374a4739d034c2d5593a7780d);
+        
+    
+        var popup_79972d37f9ba6fd3b46666f0e3d9ac24 = L.popup({"maxWidth": 300});
+
+        
+            var html_12e09363963945a8236323ec977f944b = $(`<div id="html_12e09363963945a8236323ec977f944b" style="width: 100.0%; height: 100.0%;"><b>Wilson Elementary</b><br>150 East Mendocino Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 13.8%</div>`)[0];
+            popup_79972d37f9ba6fd3b46666f0e3d9ac24.setContent(html_12e09363963945a8236323ec977f944b);
+        
+
+        marker_9eb2232fdfa6bc48481ad632051cfadb.bindPopup(popup_79972d37f9ba6fd3b46666f0e3d9ac24)
+        ;
+
+        
+    
+    
+            var marker_9f2a6ab2ef5be58a87de1ff4b3bbea96 = L.marker(
+                [37.966225, -121.3412],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_dd3758677f082c40a415fe605f596aee = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffae00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_9f2a6ab2ef5be58a87de1ff4b3bbea96.setIcon(div_icon_dd3758677f082c40a415fe605f596aee);
+        
+    
+        var popup_e91d991823639d9bc3dbb6a8f4860d28 = L.popup({"maxWidth": 300});
+
+        
+            var html_8d8b2cd8c3d452fd4bddbdf422647d46 = $(`<div id="html_8d8b2cd8c3d452fd4bddbdf422647d46" style="width: 100.0%; height: 100.0%;"><b>Commodore Stockton Skills</b><br>2725 Michigan Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 39.3%</div>`)[0];
+            popup_e91d991823639d9bc3dbb6a8f4860d28.setContent(html_8d8b2cd8c3d452fd4bddbdf422647d46);
+        
+
+        marker_9f2a6ab2ef5be58a87de1ff4b3bbea96.bindPopup(popup_e91d991823639d9bc3dbb6a8f4860d28)
+        ;
+
+        
+    
+    
+            var marker_aca1e0af4bf78c79a1cf8e03e3ce1b89 = L.marker(
+                [37.98292, -121.32122],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_e04004800b8f350cad19fffa75454f2a = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff7f00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_aca1e0af4bf78c79a1cf8e03e3ce1b89.setIcon(div_icon_e04004800b8f350cad19fffa75454f2a);
+        
+    
+        var popup_7d7b126736824a9c2973c785df095ef2 = L.popup({"maxWidth": 300});
+
+        
+            var html_225a784924141711b3176a65ef4e6734 = $(`<div id="html_225a784924141711b3176a65ef4e6734" style="width: 100.0%; height: 100.0%;"><b>Kohl Open Elementary</b><br>4115 North Crown, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 30.0%</div>`)[0];
+            popup_7d7b126736824a9c2973c785df095ef2.setContent(html_225a784924141711b3176a65ef4e6734);
+        
+
+        marker_aca1e0af4bf78c79a1cf8e03e3ce1b89.bindPopup(popup_7d7b126736824a9c2973c785df095ef2)
+        ;
+
+        
+    
+    
+            var marker_7e5e21bf5c9a474d711fd67b96e45dac = L.marker(
+                [37.944607, -121.31336],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_a201b18109ecd4d8cc83de6a8ef18255 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff3700ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_7e5e21bf5c9a474d711fd67b96e45dac.setIcon(div_icon_a201b18109ecd4d8cc83de6a8ef18255);
+        
+    
+        var popup_a99a7fb0035f8fa08313b4360924392b = L.popup({"maxWidth": 300});
+
+        
+            var html_3829e8b0cba85685fc393e5cc94d4abc = $(`<div id="html_3829e8b0cba85685fc393e5cc94d4abc" style="width: 100.0%; height: 100.0%;"><b>George Washington Elementary</b><br>1735 West Sonora, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 17.6%</div>`)[0];
+            popup_a99a7fb0035f8fa08313b4360924392b.setContent(html_3829e8b0cba85685fc393e5cc94d4abc);
+        
+
+        marker_7e5e21bf5c9a474d711fd67b96e45dac.bindPopup(popup_a99a7fb0035f8fa08313b4360924392b)
+        ;
+
+        
+    
+    
+            var marker_a923e2bfc1bca622a9dbc02047880979 = L.marker(
+                [38.002787, -121.28442],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_fc9d16521cdb6845a6aa604dce676574 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ffaf00ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_a923e2bfc1bca622a9dbc02047880979.setIcon(div_icon_fc9d16521cdb6845a6aa604dce676574);
+        
+    
+        var popup_7cf52fd33ac6434939086ce218331336 = L.popup({"maxWidth": 300});
+
+        
+            var html_921e3588406e05f53235bbb7524c0c07 = $(`<div id="html_921e3588406e05f53235bbb7524c0c07" style="width: 100.0%; height: 100.0%;"><b>Rio Calaveras Elementary</b><br>1819 East Bianchi Road, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 39.7%</div>`)[0];
+            popup_7cf52fd33ac6434939086ce218331336.setContent(html_921e3588406e05f53235bbb7524c0c07);
+        
+
+        marker_a923e2bfc1bca622a9dbc02047880979.bindPopup(popup_7cf52fd33ac6434939086ce218331336)
+        ;
+
+        
+    
+    
+            var marker_578afb9821ab9e045c12848e68ee909d = L.marker(
+                [37.927528, -121.312],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_1f67a0305b755f23bc3e6f64fc1c0b63 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff8400ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_578afb9821ab9e045c12848e68ee909d.setIcon(div_icon_1f67a0305b755f23bc3e6f64fc1c0b63);
+        
+    
+        var popup_dc33616358a121a17b58902c44928d9e = L.popup({"maxWidth": 300});
+
+        
+            var html_16f150fb262547f224cfda94787a1912 = $(`<div id="html_16f150fb262547f224cfda94787a1912" style="width: 100.0%; height: 100.0%;"><b>San Joaquin Elementary</b><br>2020 South Fresno Avenue, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 30.9%</div>`)[0];
+            popup_dc33616358a121a17b58902c44928d9e.setContent(html_16f150fb262547f224cfda94787a1912);
+        
+
+        marker_578afb9821ab9e045c12848e68ee909d.bindPopup(popup_dc33616358a121a17b58902c44928d9e)
+        ;
+
+        
+    
+    
+            var marker_2db566e8ecfc9e9b52d3e03f11b87560 = L.marker(
+                [37.934322, -121.29279],
+                {}
+            ).addTo(feature_group_0b925dd3b157750225c9561becd84be3);
+        
+    
+            var div_icon_ffe9d2084f162b6517fcdf62bc5bd9e5 = L.divIcon({"className": "empty", "html": "\n        \u003cdiv style=\"\n            width: 24px; height: 24px;\n            background: #ff1900ff;\n            transform: rotate(45deg);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        \"\u003e\n            \u003cdiv style=\"\n                transform: rotate(-45deg);\n                color: white;\n                font-size: 12px;\n                font-family: Arial;\n            \"\u003e\n                \ud83c\udf93\n            \u003c/div\u003e\n        \u003c/div\u003e\n        ", "iconAnchor": [12, 12], "iconSize": [24, 24]});
+            marker_2db566e8ecfc9e9b52d3e03f11b87560.setIcon(div_icon_ffe9d2084f162b6517fcdf62bc5bd9e5);
+        
+    
+        var popup_48f13b1c1ee944a03dec0d371c487ae7 = L.popup({"maxWidth": 300});
+
+        
+            var html_dd242075a2bb0325f8a88f86d492d012 = $(`<div id="html_dd242075a2bb0325f8a88f86d492d012" style="width: 100.0%; height: 100.0%;"><b>Dolores Huerta Elementary</b><br>1644 South Lincoln, Stockton<br><b>Charter:</b> N<br><b>Geographic/Host District:</b> Stockton Unified School District<br><b>Funding Type:</b> District<br><b>Average ELA-Math Proficiency:</b> 12.5%</div>`)[0];
+            popup_48f13b1c1ee944a03dec0d371c487ae7.setContent(html_dd242075a2bb0325f8a88f86d492d012);
+        
+
+        marker_2db566e8ecfc9e9b52d3e03f11b87560.bindPopup(popup_48f13b1c1ee944a03dec0d371c487ae7)
+        ;
+
+        
+    
+    
+            var layer_control_c57099ddcbe6728a6f872b62cdd54de5 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_3734702d2c9e865e446789e89d3b88c8,
+                },
+                overlays :  {
+                    "Charter Schools" : feature_group_cf4aa779242edb3867dc4c676567598a,
+                    "District Schools" : feature_group_0b925dd3b157750225c9561becd84be3,
+                },
+            };
+            L.control.layers(
+                layer_control_c57099ddcbe6728a6f872b62cdd54de5.base_layers,
+                layer_control_c57099ddcbe6728a6f872b62cdd54de5.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_f5ddf8c00c785f691100e9d5ad856cdf);
+        
+    
+    var color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2 = {};
+
+    
+    color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.color = d3.scale.threshold()
+              .domain([8.072776937710355, 8.244192259591479, 8.415607581472601, 8.587022903353725, 8.75843822523485, 8.929853547115972, 9.101268868997096, 9.27268419087822, 9.444099512759342, 9.615514834640466, 9.786930156521588, 9.958345478402713, 10.129760800283837, 10.30117612216496, 10.472591444046083, 10.644006765927207, 10.81542208780833, 10.986837409689453, 11.158252731570578, 11.329668053451702, 11.501083375332824, 11.672498697213948, 11.84391401909507, 12.015329340976194, 12.186744662857318, 12.358159984738442, 12.529575306619565, 12.700990628500687, 12.872405950381811, 13.043821272262935, 13.21523659414406, 13.386651916025182, 13.558067237906306, 13.72948255978743, 13.900897881668552, 14.072313203549676, 14.2437285254308, 14.415143847311924, 14.586559169193047, 14.75797449107417, 14.929389812955293, 15.100805134836417, 15.272220456717541, 15.443635778598665, 15.615051100479787, 15.78646642236091, 15.957881744242034, 16.129297066123158, 16.300712388004282, 16.472127709885406, 16.643543031766526, 16.814958353647654, 16.986373675528775, 17.1577889974099, 17.329204319291023, 17.500619641172147, 17.67203496305327, 17.84345028493439, 18.014865606815516, 18.18628092869664, 18.357696250577764, 18.529111572458888, 18.70052689434001, 18.871942216221136, 19.043357538102256, 19.21477285998338, 19.386188181864505, 19.557603503745625, 19.729018825626753, 19.900434147507873, 20.071849469389, 20.24326479127012, 20.414680113151242, 20.58609543503237, 20.75751075691349, 20.928926078794618, 21.100341400675738, 21.27175672255686, 21.443172044437986, 21.614587366319107, 21.78600268820023, 21.957418010081355, 22.12883333196248, 22.300248653843603, 22.471663975724724, 22.64307929760585, 22.81449461948697, 22.985909941368096, 23.15732526324922, 23.328740585130344, 23.500155907011468, 23.67157122889259, 23.842986550773713, 24.014401872654837, 24.18581719453596, 24.357232516417085, 24.52864783829821, 24.70006316017933, 24.871478482060454, 25.042893803941578, 25.2143091258227, 25.385724447703826, 25.55713976958495, 25.72855509146607, 25.899970413347194, 26.07138573522832, 26.242801057109443, 26.414216378990567, 26.585631700871687, 26.75704702275281, 26.92846234463394, 27.09987766651506, 27.271292988396183, 27.442708310277308, 27.614123632158428, 27.785538954039556, 27.956954275920676, 28.1283695978018, 28.299784919682924, 28.471200241564045, 28.642615563445172, 28.814030885326297, 28.985446207207417, 29.15686152908854, 29.32827685096966, 29.49969217285079, 29.671107494731913, 29.842522816613034, 30.013938138494158, 30.185353460375282, 30.356768782256406, 30.52818410413753, 30.699599426018654, 30.871014747899775, 31.0424300697809, 31.213845391662023, 31.385260713543147, 31.55667603542427, 31.72809135730539, 31.899506679186516, 32.07092200106764, 32.242337322948764, 32.413752644829884, 32.58516796671101, 32.75658328859213, 32.92799861047326, 33.09941393235438, 33.27082925423551, 33.44224457611663, 33.61365989799775, 33.78507521987888, 33.956490541760004, 34.12790586364112, 34.299321185522246, 34.470736507403366, 34.642151829284494, 34.813567151165614, 34.98498247304674, 35.15639779492786, 35.32781311680898, 35.49922843869011, 35.67064376057124, 35.84205908245236, 36.01347440433348, 36.18488972621461, 36.35630504809572, 36.52772036997685, 36.699135691857975, 36.870551013739096, 37.04196633562022, 37.213381657501344, 37.38479697938247, 37.55621230126359, 37.72762762314471, 37.89904294502584, 38.07045826690696, 38.24187358878808, 38.41328891066921, 38.58470423255034, 38.75611955443145, 38.92753487631258, 39.098950198193705, 39.270365520074826, 39.441780841955946, 39.613196163837074, 39.784611485718195, 39.95602680759932, 40.12744212948044, 40.29885745136157, 40.4702727732427, 40.64168809512381, 40.81310341700494, 40.98451873888607, 41.155934060767194, 41.32734938264831, 41.498764704529435, 41.67018002641055, 41.841595348291676, 42.013010670172804, 42.18442599205392, 42.355841313935045, 42.52725663581617, 42.6986719576973, 42.870087279578414, 43.04150260145954, 43.21291792334067, 43.38433324522178, 43.55574856710291, 43.72716388898404, 43.898579210865165, 44.06999453274628, 44.241409854627406, 44.412825176508534, 44.58424049838965, 44.755655820270775, 44.9270711421519, 45.098486464033016, 45.26990178591414, 45.44131710779527, 45.6127324296764, 45.784147751557526, 45.95556307343864, 46.12697839531977, 46.29839371720088, 46.46980903908201, 46.641224360963136, 46.812639682844264, 46.98405500472538, 47.155470326606505, 47.32688564848763, 47.49830097036876, 47.66971629224987, 47.841131614131, 48.012546936012114, 48.18396225789324, 48.35537757977437, 48.5267929016555, 48.69820822353661, 48.86962354541774, 49.041038867298866, 49.212454189179994, 49.38386951106111, 49.555284832942235, 49.72670015482335, 49.898115476704476, 50.0695307985856, 50.24094612046673, 50.41236144234786, 50.58377676422897, 50.7551920861101, 50.92660740799123, 51.09802272987234, 51.26943805175347, 51.440853373634596, 51.61226869551571, 51.78368401739684, 51.955099339277965, 52.12651466115909, 52.297929983040206, 52.46934530492133, 52.64076062680246, 52.812175948683574, 52.9835912705647, 53.15500659244583, 53.32642191432696, 53.49783723620807, 53.6692525580892, 53.840667879970326, 54.01208320185144, 54.18349852373257, 54.354913845613694, 54.52632916749481, 54.697744489375935, 54.86915981125706, 55.04057513313819, 55.21199045501932, 55.38340577690043, 55.55482109878156, 55.72623642066267, 55.8976517425438, 56.06906706442493, 56.24048238630604, 56.41189770818717, 56.5833130300683, 56.754728351949424, 56.92614367383055, 57.097558995711665, 57.26897431759279, 57.440389639473906, 57.611804961355034, 57.78322028323616, 57.95463560511729, 58.1260509269984, 58.29746624887953, 58.46888157076066, 58.640296892641786, 58.8117122145229, 58.98312753640403, 59.15454285828514, 59.32595818016627, 59.497373502047395, 59.66878882392852, 59.84020414580965, 60.011619467690764, 60.18303478957189, 60.35445011145302, 60.52586543333413, 60.69728075521526, 60.868696077096374, 61.0401113989775, 61.21152672085863, 61.38294204273976, 61.554357364620884, 61.725772686502, 61.897188008383125, 62.06860333026424, 62.240018652145366, 62.411433974026494, 62.58284929590762, 62.754264617788735, 62.92567993966986, 63.09709526155099, 63.26851058343212, 63.43992590531323, 63.61134122719436, 63.78275654907547, 63.9541718709566, 64.12558719283773, 64.29700251471886, 64.46841783659998, 64.6398331584811, 64.81124848036222, 64.98266380224335, 65.15407912412446, 65.32549444600559, 65.4969097678867, 65.66832508976783, 65.83974041164896, 66.01115573353009, 66.18257105541122, 66.35398637729233, 66.52540169917346, 66.69681702105458, 66.8682323429357, 67.03964766481683, 67.21106298669795, 67.38247830857907, 67.5538936304602, 67.72530895234132, 67.89672427422245, 68.06813959610356, 68.23955491798469, 68.41097023986582, 68.58238556174693, 68.75380088362806, 68.92521620550919, 69.09663152739031, 69.26804684927143, 69.43946217115256, 69.61087749303368, 69.7822928149148, 69.95370813679592, 70.12512345867705, 70.29653878055817, 70.4679541024393, 70.63936942432042, 70.81078474620155, 70.98220006808268, 71.15361538996379, 71.32503071184492, 71.49644603372603, 71.66786135560716, 71.83927667748829, 72.01069199936941, 72.18210732125053, 72.35352264313165, 72.52493796501278, 72.69635328689391, 72.86776860877504, 73.03918393065615, 73.21059925253728, 73.38201457441839, 73.55342989629952, 73.72484521818065, 73.89626054006177, 74.06767586194289, 74.23909118382403, 74.41050650570514, 74.58192182758626, 74.75333714946738, 74.92475247134851, 75.09616779322964, 75.26758311511075, 75.43899843699188, 75.61041375887301, 75.78182908075412, 75.95324440263525, 76.12465972451638, 76.29607504639749, 76.46749036827862, 76.63890569015975, 76.81032101204087, 76.98173633392199, 77.15315165580313, 77.32456697768424, 77.49598229956536, 77.66739762144648, 77.83881294332761, 78.01022826520874, 78.18164358708985, 78.35305890897098, 78.5244742308521, 78.69588955273322, 78.86730487461436, 79.03872019649548, 79.21013551837659, 79.38155084025772, 79.55296616213884, 79.72438148401997, 79.89579680590109, 80.06721212778221, 80.23862744966334, 80.41004277154445, 80.5814580934256, 80.75287341530671, 80.92428873718782, 81.09570405906895, 81.26711938095008, 81.4385347028312, 81.60995002471232, 81.78136534659346, 81.95278066847457, 82.12419599035569, 82.29561131223683, 82.46702663411794, 82.63844195599907, 82.80985727788018, 82.98127259976131, 83.15268792164244, 83.32410324352355, 83.4955185654047, 83.66693388728581, 83.83834920916692, 84.00976453104806, 84.18117985292918, 84.3525951748103, 84.52401049669142, 84.69542581857255, 84.86684114045367, 85.03825646233479, 85.20967178421593, 85.38108710609704, 85.55250242797817, 85.7239177498593, 85.89533307174041, 86.06674839362154, 86.23816371550265, 86.40957903738379, 86.5809943592649, 86.75240968114602, 86.92382500302716, 87.09524032490827, 87.2666556467894, 87.43807096867053, 87.60948629055164, 87.78090161243277, 87.95231693431388, 88.12373225619503, 88.29514757807614, 88.46656289995725, 88.6379782218384, 88.80939354371951, 88.98080886560064, 89.15222418748176, 89.32363950936288, 89.495054831244, 89.66647015312512, 89.83788547500626, 90.00930079688737, 90.1807161187685, 90.35213144064963, 90.52354676253074, 90.69496208441187, 90.866377406293, 91.03779272817413, 91.20920805005524, 91.38062337193635, 91.5520386938175, 91.72345401569861, 91.89486933757973, 92.06628465946086, 92.23769998134198, 92.4091153032231, 92.58053062510423, 92.75194594698536, 92.92336126886647, 93.09477659074759, 93.26619191262873, 93.43760723450984, 93.60902255639097])
+              .range(['#ff0000ff', '#ff0000ff', '#ff0100ff', '#ff0200ff', '#ff0300ff', '#ff0400ff', '#ff0500ff', '#ff0600ff', '#ff0700ff', '#ff0800ff', '#ff0900ff', '#ff0a00ff', '#ff0b00ff', '#ff0c00ff', '#ff0d00ff', '#ff0e00ff', '#ff0f00ff', '#ff1000ff', '#ff1100ff', '#ff1200ff', '#ff1300ff', '#ff1400ff', '#ff1500ff', '#ff1600ff', '#ff1700ff', '#ff1800ff', '#ff1900ff', '#ff1a00ff', '#ff1b00ff', '#ff1c00ff', '#ff1d00ff', '#ff1e00ff', '#ff1f00ff', '#ff2000ff', '#ff2100ff', '#ff2200ff', '#ff2300ff', '#ff2400ff', '#ff2500ff', '#ff2600ff', '#ff2700ff', '#ff2800ff', '#ff2900ff', '#ff2a00ff', '#ff2b00ff', '#ff2c00ff', '#ff2d00ff', '#ff2e00ff', '#ff2f00ff', '#ff3000ff', '#ff3100ff', '#ff3200ff', '#ff3300ff', '#ff3400ff', '#ff3500ff', '#ff3600ff', '#ff3700ff', '#ff3800ff', '#ff3900ff', '#ff3a00ff', '#ff3b00ff', '#ff3c00ff', '#ff3d00ff', '#ff3e00ff', '#ff3f00ff', '#ff4000ff', '#ff4100ff', '#ff4200ff', '#ff4300ff', '#ff4400ff', '#ff4500ff', '#ff4600ff', '#ff4700ff', '#ff4800ff', '#ff4900ff', '#ff4a00ff', '#ff4b00ff', '#ff4c00ff', '#ff4d00ff', '#ff4e00ff', '#ff4f00ff', '#ff5000ff', '#ff5100ff', '#ff5200ff', '#ff5300ff', '#ff5400ff', '#ff5500ff', '#ff5600ff', '#ff5700ff', '#ff5800ff', '#ff5900ff', '#ff5a00ff', '#ff5b00ff', '#ff5c00ff', '#ff5d00ff', '#ff5e00ff', '#ff5f00ff', '#ff6000ff', '#ff6100ff', '#ff6200ff', '#ff6300ff', '#ff6400ff', '#ff6500ff', '#ff6600ff', '#ff6700ff', '#ff6800ff', '#ff6900ff', '#ff6a00ff', '#ff6b00ff', '#ff6c00ff', '#ff6d00ff', '#ff6e00ff', '#ff6f00ff', '#ff7000ff', '#ff7100ff', '#ff7200ff', '#ff7300ff', '#ff7400ff', '#ff7500ff', '#ff7600ff', '#ff7700ff', '#ff7800ff', '#ff7900ff', '#ff7a00ff', '#ff7b00ff', '#ff7c00ff', '#ff7d00ff', '#ff7e00ff', '#ff7f00ff', '#ff8000ff', '#ff8100ff', '#ff8200ff', '#ff8300ff', '#ff8400ff', '#ff8500ff', '#ff8600ff', '#ff8700ff', '#ff8800ff', '#ff8900ff', '#ff8a00ff', '#ff8b00ff', '#ff8c00ff', '#ff8d00ff', '#ff8e00ff', '#ff8f00ff', '#ff9000ff', '#ff9100ff', '#ff9200ff', '#ff9300ff', '#ff9400ff', '#ff9500ff', '#ff9600ff', '#ff9700ff', '#ff9800ff', '#ff9900ff', '#ff9a00ff', '#ff9b00ff', '#ff9c00ff', '#ff9d00ff', '#ff9e00ff', '#ff9f00ff', '#ffa000ff', '#ffa100ff', '#ffa200ff', '#ffa300ff', '#ffa400ff', '#ffa500ff', '#ffa600ff', '#ffa600ff', '#ffa700ff', '#ffa700ff', '#ffa800ff', '#ffa800ff', '#ffa900ff', '#ffa900ff', '#ffaa00ff', '#ffaa00ff', '#ffab00ff', '#ffab00ff', '#ffac00ff', '#ffad00ff', '#ffad00ff', '#ffae00ff', '#ffae00ff', '#ffaf00ff', '#ffaf00ff', '#ffb000ff', '#ffb000ff', '#ffb100ff', '#ffb100ff', '#ffb200ff', '#ffb300ff', '#ffb300ff', '#ffb400ff', '#ffb400ff', '#ffb500ff', '#ffb500ff', '#ffb600ff', '#ffb600ff', '#ffb700ff', '#ffb700ff', '#ffb800ff', '#ffb900ff', '#ffb900ff', '#ffba00ff', '#ffba00ff', '#ffbb00ff', '#ffbb00ff', '#ffbc00ff', '#ffbc00ff', '#ffbd00ff', '#ffbd00ff', '#ffbe00ff', '#ffbe00ff', '#ffbf00ff', '#ffc000ff', '#ffc000ff', '#ffc100ff', '#ffc100ff', '#ffc200ff', '#ffc200ff', '#ffc300ff', '#ffc300ff', '#ffc400ff', '#ffc400ff', '#ffc500ff', '#ffc600ff', '#ffc600ff', '#ffc700ff', '#ffc700ff', '#ffc800ff', '#ffc800ff', '#ffc900ff', '#ffc900ff', '#ffca00ff', '#ffca00ff', '#ffcb00ff', '#ffcc00ff', '#ffcc00ff', '#ffcd00ff', '#ffcd00ff', '#ffce00ff', '#ffce00ff', '#ffcf00ff', '#ffcf00ff', '#ffd000ff', '#ffd000ff', '#ffd100ff', '#ffd200ff', '#ffd200ff', '#ffd300ff', '#ffd300ff', '#ffd400ff', '#ffd400ff', '#ffd500ff', '#ffd500ff', '#ffd600ff', '#ffd600ff', '#ffd700ff', '#ffd700ff', '#ffd800ff', '#ffd900ff', '#ffd900ff', '#ffda00ff', '#ffda00ff', '#ffdb00ff', '#ffdb00ff', '#ffdc00ff', '#ffdc00ff', '#ffdd00ff', '#ffdd00ff', '#ffde00ff', '#ffdf00ff', '#ffdf00ff', '#ffe000ff', '#ffe000ff', '#ffe100ff', '#ffe100ff', '#ffe200ff', '#ffe200ff', '#ffe300ff', '#ffe300ff', '#ffe400ff', '#ffe500ff', '#ffe500ff', '#ffe600ff', '#ffe600ff', '#ffe700ff', '#ffe700ff', '#ffe800ff', '#ffe800ff', '#ffe900ff', '#ffe900ff', '#ffea00ff', '#ffea00ff', '#ffeb00ff', '#ffec00ff', '#ffec00ff', '#ffed00ff', '#ffed00ff', '#ffee00ff', '#ffee00ff', '#ffef00ff', '#ffef00ff', '#fff000ff', '#fff000ff', '#fff100ff', '#fff200ff', '#fff200ff', '#fff300ff', '#fff300ff', '#fff400ff', '#fff400ff', '#fff500ff', '#fff500ff', '#fff600ff', '#fff600ff', '#fff700ff', '#fff800ff', '#fff800ff', '#fff900ff', '#fff900ff', '#fffa00ff', '#fffa00ff', '#fffb00ff', '#fffb00ff', '#fffc00ff', '#fffc00ff', '#fffd00ff', '#fffe00ff', '#fffe00ff', '#ffff00ff', '#ffff00ff', '#ffff00ff', '#fdfe00ff', '#fcfe00ff', '#fafd00ff', '#f9fc00ff', '#f7fb00ff', '#f6fb00ff', '#f4fa00ff', '#f3f900ff', '#f1f800ff', '#f0f800ff', '#eef700ff', '#edf600ff', '#ebf500ff', '#e9f500ff', '#e8f400ff', '#e6f300ff', '#e5f200ff', '#e3f100ff', '#e2f100ff', '#e0f000ff', '#dfef00ff', '#ddee00ff', '#dcee00ff', '#daed00ff', '#d9ec00ff', '#d7eb00ff', '#d5eb00ff', '#d4ea00ff', '#d2e900ff', '#d1e800ff', '#cfe700ff', '#cee700ff', '#cce600ff', '#cbe500ff', '#c9e400ff', '#c8e400ff', '#c6e300ff', '#c5e200ff', '#c3e100ff', '#c1e100ff', '#c0e000ff', '#bedf00ff', '#bdde00ff', '#bbde00ff', '#badd00ff', '#b8dc00ff', '#b7db00ff', '#b5da00ff', '#b4da00ff', '#b2d900ff', '#b0d800ff', '#afd700ff', '#add700ff', '#acd600ff', '#aad500ff', '#a9d400ff', '#a7d400ff', '#a6d300ff', '#a4d200ff', '#a3d100ff', '#a1d000ff', '#a0d000ff', '#9ecf00ff', '#9cce00ff', '#9bcd00ff', '#99cd00ff', '#98cc00ff', '#96cb00ff', '#95ca00ff', '#93ca00ff', '#92c900ff', '#90c800ff', '#8fc700ff', '#8dc700ff', '#8cc600ff', '#8ac500ff', '#88c400ff', '#87c300ff', '#85c300ff', '#84c200ff', '#82c100ff', '#81c000ff', '#7fc000ff', '#7ebf00ff', '#7cbe00ff', '#7bbd00ff', '#79bd00ff', '#78bc00ff', '#76bb00ff', '#74ba00ff', '#73b900ff', '#71b900ff', '#70b800ff', '#6eb700ff', '#6db600ff', '#6bb600ff', '#6ab500ff', '#68b400ff', '#67b300ff', '#65b300ff', '#64b200ff', '#62b100ff', '#60b000ff', '#5fb000ff', '#5daf00ff', '#5cae00ff', '#5aad00ff', '#59ac00ff', '#57ac00ff', '#56ab00ff', '#54aa00ff', '#53a900ff', '#51a900ff', '#50a800ff', '#4ea700ff', '#4ca600ff', '#4ba600ff', '#49a500ff', '#48a400ff', '#46a300ff', '#45a200ff', '#43a200ff', '#42a100ff', '#40a000ff', '#3f9f00ff', '#3d9f00ff', '#3c9e00ff', '#3a9d00ff', '#389c00ff', '#379c00ff', '#359b00ff', '#349a00ff', '#329900ff', '#319900ff', '#2f9800ff', '#2e9700ff', '#2c9600ff', '#2b9500ff', '#299500ff', '#289400ff', '#269300ff', '#249200ff', '#239200ff', '#219100ff', '#209000ff', '#1e8f00ff', '#1d8f00ff', '#1b8e00ff', '#1a8d00ff', '#188c00ff', '#178b00ff', '#158b00ff', '#148a00ff', '#128900ff', '#108800ff', '#0f8800ff', '#0d8700ff', '#0c8600ff', '#0a8500ff', '#098500ff', '#078400ff', '#068300ff', '#048200ff', '#038200ff', '#018100ff', '#008000ff']);
+    
+
+    color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.x = d3.scale.linear()
+              .domain([8.072776937710355, 93.60902255639097])
+              .range([0, 450 - 50]);
+
+    color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.legend = L.control({position: 'topright'});
+    color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.legend.addTo(map_f5ddf8c00c785f691100e9d5ad856cdf);
+
+    color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.xAxis = d3.svg.axis()
+        .scale(color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([8.072776937710355, 36.58485881060389, 65.09694068349742, 93.60902255639097]);
+
+    color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.g = color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.g.selectAll("rect")
+        .data(color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.x(color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.color.domain()[i - 1]) : color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.x.range()[0],
+            x1: i < color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.color.domain().length ? color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.x(color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.color.domain()[i]) : color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.g.call(color_map_2807a9af5dc8e3a50f5b6c2195e2b8c2.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Average ELA-Math Proficiency (%)");
+</script>
+</html>
